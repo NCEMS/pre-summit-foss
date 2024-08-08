@@ -1,26 +1,26 @@
-# foss-2024
+# NCEMS Pre Summit Foundational Open Science Skills (FOSS) Training
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11105956.svg)](https://doi.org/10.5281/zenodo.11105956)
+Documentation based upon CyVerse Learning's Foundations of Open Science Skills (FOSS) course. 
 
+Course will take place Sept. 4 - September 22, 2024, online, Every Wednesday 11 am - 12:30 pm PST
 
-Documentation for CyVerse Learning's Foundations of Open Science Skills (FOSS) course. 
-
-Course will take place Sept. 5 - Nov. 21, 2024, online, Every Thursday 11 am - 12:30 pm Arizona time
-
-See the schedule at https://foss.cyverse.org/schedule/
+See the schedule at https://ncems.github.io/pre-summit-foss/schedule/
 
 ## Build
 
 To build the docs locally:
 
 ```
-git clone https://github.com/CyVerse-learning-materials/foss.git
+git clone https://github.com/ncems/pre-summit-foss.git
 
 pip install -r requirements.txt
 
 python -m mkdocs serve
 ```
 Open a browser and go to https://localhost:8000
-## Cite as
+
+## Citation
+
+Material based upon:
 
 Michele Cosi. Jeffrey K. Gillan, Tyson L. Swetnam. (2024, May 2). CyVerse-learning-materials/foss: FOSS 2024 Spring. Zenodo. https://zenodo.org/records/11105956
