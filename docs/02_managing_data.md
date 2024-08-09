@@ -415,16 +415,7 @@ the future."(Source: https://en.wikipedia.org/wiki/Data_management_plan)
 
 [Example DMPs](https://dmptool.org/public_plans){target=_blank}
 
-
-### Today's Guest Speaker
-
-<figure markdown>
-  ![Image title](/assets/wade_bishop.jpg){ width="200" }
-  <figcaption>Dr. Wade Bishop, Professor in the School of Information Sciences at University of Tennessee, Knoxville </figcaption>
-</figure>
-
-
-Dr. Bishop's [article](https://datascience.codata.org/articles/10.5334/dsj-2023-027){target=_blank} on DMPs
+Bishop [article](https://datascience.codata.org/articles/10.5334/dsj-2023-027){target=_blank} on DMPs
 
 ---
 

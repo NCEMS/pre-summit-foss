@@ -9,10 +9,9 @@ We will be using several services that require you to create a user account.
 | Account | Notes |
 | --- | --- |
 | [:material-github: GitHub](https://github.com){target=_blank} |  GitHub will be used to store lecture materials and your own work. We will use [GitHub Education](https://education.github.com/){target=_blank} and its free features for hands-on.
-| [:material-docker: Docker](https://hub.docker.com){target=_blank} | Link your GitHub account to the DockerHub. |
-| [:material-slack: Slack](https://uadatascience.slack.com/){target=_blank} | We use the `UA Data Science`  Slack organization's foss channel, you should have received an invitation via email. You can use Slack in the browser, but the desktop app is usually less buggy. |
+| [:material-slack: Slack](https://cyverselearning.slack.com/){target=_blank} | We use the `CyVerse Learning`  Slack organization. You can use Slack in the browser, but the desktop app is usually less buggy. |
 | [:material-language-markdown: HackMD](https://hackmd.io/){target=_blank} | We will use HackMD in order to facilitate daily discussions, questions and general notes. Link your HackMD using your GitHub account
-| [Cyverse](https://user.cyverse.org/signup){target=_blank} | We will introduce you to Cyverse which is a powerful cloud computer with large data storage.
+| [CyVerse](https://user.cyverse.org/signup){target=_blank} | We will introduce you to CyVerse which is a powerful cloud computer with large data storage.
 
 
 !!! Info "Link to :material-language-markdown: HackMD"
@@ -33,12 +32,12 @@ You will need to have the following software installed on your personal computer
 
 | Software | Notes |
 | -------- | ----- |
-| Web Browser | [:material-google-chrome: Chrome](https://www.google.com/chrome/dr/download/){target=_blank} or [:material-firefox: Firefox](https://www.mozilla.org/en-US/firefox/new/){target=_blank}. |
-| Text Editor | [:material-microsoft-visual-studio-code: VS Code](https://code.visualstudio.com/download){target=_blank} or [SublimeText](https://www.sublimetext.com/){target=_blank} |
+| Web Browser | [:material-google-chrome: Chrome](https://www.google.com/chrome/dr/download/){target=_blank} or [:material-firefox: Firefox](https://www.mozilla.org/en-US/firefox/new/){target=_blank} |
+| Text Editor | [:material-microsoft-visual-studio-code: VS Code](https://code.visualstudio.com/download){target=_blank} |
 
 !!! Warning "**Attention** :material-microsoft-windows: Windows users"
 
-    Much of what we are going to be teaching is based on open-source software which operates on cloud and is incompatible with Windows OS.
+    Much of what we are going to be teaching is based on open-source software which operates on cloud and is incompatible within Windows OS. *Don't worry*
 
     Unix-based systems such as Linux [:material-ubuntu: Ubuntu](https://ubuntu.com/){target=_blank} and [:material-apple: MacOS X](https://www.apple.com/macos/){target=_blank}, as many scientific tools require a Unix Operating System (OS). 
     

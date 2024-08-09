@@ -4,7 +4,7 @@ repo_url: 'https://github.com/NCEMS/pre-summit-foss'
 
 site_name: 'NCEMS Pre-Summit Open Science Training'
 site_description: 'Workshop teaching researchers core skills for conducting open science.'
-site_author: 'Tyson Swetnam'
+site_author: 'Tyson Swetnam, Nicole Lazar'
 site_url: 'https://ncems.github.io/pre-summit-foss'
 
 edit_uri: edit/mkdocs/docs
@@ -17,7 +17,7 @@ copyright: 'Copyright &copy; 2024 The Pennsylvania State University'
 nav:
   - Home: 
     - 'Home': index.md
-    - 'Before FOSS Starts': installation.md
+    - 'Prerequisites': installation.md
     - 'Schedule': schedule.md
     - 'Code of Conduct': code_of_conduct.md
     - 'Glossary & Acronyms': glossary.md
@@ -44,11 +44,10 @@ theme:
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default 
+      scheme: ncems
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -65,16 +64,15 @@ theme:
     - navigation.tabs.sticky
     - navigation.indexes
     - navigation.top
-  favicon: assets/favicon.png
+  favicon: assets/favicon.ico
   icon:
-    logo: material/rocket
+    logo: material/molecule
 
 # Options
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/ncems/
-      link: https://harbor.cyverse.org/
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/c/CyverseOrgProject
 
