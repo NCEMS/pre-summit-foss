@@ -53,7 +53,7 @@ The CLI sees the computer stripped down to only a [Terminal](https://en.wikipedi
 Though there are technical differences between them, the terms **Command Line Interface**, **Terminal**, **Shell**, and **BASH** will be used more or less interchangeably throughout the lesson. 
 
 <figure markdown>
-  <a target="blank" rel="cli">![cli](../assets/cli.gif){width=500} </a>
+  <a target="blank" rel="cli">![cli](./assets/cli.gif){width=500} </a>
     <figcaption> The Terminal shell</figcaption>
 </figure>
 
@@ -130,7 +130,7 @@ The following tutorial material was taken from the [Carpentries' Shell Module](h
 
 
 <figure markdown>
-  <a target="blank" rel="open science">![open science](../assets/linux_structure.png){ width="300" } </a>
+  <a target="blank" rel="open science">![open science](./assets/linux_structure.png){ width="300" } </a>
     <figcaption> Linux Directory Structure</figcaption>
 </figure>
 

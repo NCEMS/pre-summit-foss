@@ -489,7 +489,7 @@ If you want your work to be Open and used by others, you need to specify how oth
 
 #### License Options from UArizona Library
 <figure markdown>
-  <a href="https://data.library.arizona.edu/supported-platforms/redata" target="blank" rel="open science">![open science](../assets/license_matrix.png){ width="600" } </a>
+  <a href="https://data.library.arizona.edu/supported-platforms/redata" target="blank" rel="open science">![open science](./assets/license_matrix.png){ width="600" } </a>
     <figcaption> License options for University of [Arizona Research Data Repository (ReDATA)](https://data.library.arizona.edu/supported-platforms/redata)  </figcaption>
 </figure>
 

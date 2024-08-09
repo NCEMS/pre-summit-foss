@@ -43,7 +43,7 @@
 
 
 <figure markdown>
-  <a target="blank" rel="open science">![open science](../assets/life_cycle.png){ width="400" } </a>
+  <a target="blank" rel="open science">![open science](./assets/life_cycle.png){ width="400" } </a>
     <figcaption> The Research Life Cycle from [Open Science Framework](https://osf.io/)</figcaption>
 </figure>
 <br>
@@ -81,7 +81,7 @@
 <br>
 
 <figure markdown="span">
-  <a href="" target="blank" rel="open science">![open science](../assets/open_science_word_cloud.png){ width="500" } </a>
+  <a href="" target="blank" rel="open science">![open science](./assets/open_science_word_cloud.png){ width="500" } </a>
     <figcaption> Open Science Word Cloud by [Pownall et al. 2023](http://dx.doi.org/10.31234/osf.io/vypkb)</figcaption>
 </figure>
 
@@ -259,8 +259,6 @@ Authors can comply with the memo by either:
 
 1. Publishing Open Access (this usually requires higher fees)
 2. Distributing the Author's Accepted Manuscript (AAM) 
-
-Read [NSF's open access plan](NSF’s Public Access Plan 2.0 is document NSF 23-104) in reponse to the Nelson Memo
 
 Read [USDA's open access plan](https://www.nal.usda.gov/sites/default/files/page-files/USDA_Public_Access_Implementation_Plan_8_10_2023_0.pdf) in reponse to the Nelson Memo
 
@@ -483,7 +481,7 @@ There are many circumstances where open data could be harmful:
 
 Scientists around the globe are creating computer code for scientific analysis. These are valuable contributions that need to be shared!
 
-Platforms like [GitHub](https://github.com/search?q=open+science){target=_blank} and [GitLab](https://gitlab.com/explore/projects/topics/Open%20Science){target=_blank} are ideal for collaboratively developing code and sharing with the open internet. In FOSS, we will show you how to use Github for sharing code, [documentation](04_documentation_communication.md), [hosting websites](04_documentation_communication.md), and [software version control](05_version_control.md). 
+Platforms like [GitHub](https://github.com/search?q=open+science){target=_blank} and [GitLab](https://gitlab.com/explore/projects/topics/Open%20Science){target=_blank} are ideal for collaboratively developing code and sharing with the open internet. 
 
 <figure style="display: flex; justify-content: center;">
     <a href="https://github.com/"><img src="https://cdn.iconscout.com/icon/free/png-256/free-github-169-1174970.png" alt="github" style="width: 200px; margin-right: 30px;"></a>
@@ -522,7 +520,7 @@ Platforms like [GitHub](https://github.com/search?q=open+science){target=_blank}
 Preregistration is detailing your research and analysis plan and submitting it to an online registry **before** you engage in the research. 
 
 <figure markdown>
-  <a target="blank" rel="open science">![open science](../assets/cycle_prereg.png){ width="500" } </a>
+  <a target="blank" rel="open science">![open science](./assets/cycle_prereg.png){ width="500" } </a>
     <figcaption> PreRegistration in the Research Life Cycle</figcaption>
 </figure>
 
@@ -577,7 +575,7 @@ Open Science Framework Preregistration https://www.cos.io/initiatives/prereg
 ### Traditional Closed Peer-Review System
 
 <figure markdown>
-  <a target="blank" rel="open science">![close peer-review](../assets/peer_review.png){ width="400" } </a>
+  <a target="blank" rel="open science">![close peer-review](./assets/peer_review.png){ width="400" } </a>
     <figcaption> </figcaption>
 </figure>
 
@@ -607,7 +605,7 @@ Open Science Framework Preregistration https://www.cos.io/initiatives/prereg
 ### Open Peer-Review Ideas
 
 <figure markdown>
-  <a target="blank" rel="open science">![open science](../assets/plos_peer_review.png){ width="500" } </a>
+  <a target="blank" rel="open science">![open science](./assets/plos_peer_review.png){ width="500" } </a>
     <figcaption> Open Peer Review Options at [PLOS](https://plos.org/resource/open-peer-review/)</figcaption>
 </figure>
 
