@@ -27,21 +27,6 @@
 <br>
 <br>
 
-<span style="font-size:1.3em;">_"Open Science is a collaborative and transparent approach to scientific research that emphasizes the accessibility, sharing, and reproducibility of data, methodologies, and findings to foster innovation and inclusivity"_</span>
-
--ChatGPT
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<span style="font-size:1.3em;">_"A series of reforms that interrogate every step in the research life cycle to make it more efficient, powerful and accountable in our emerging digital society"._</span>
-
--Jeffrey Gillan
-
-
 <figure markdown>
   <a target="blank" rel="open science">![open science](./assets/life_cycle.png){ width="400" } </a>
     <figcaption> The Research Life Cycle from [Open Science Framework](https://osf.io/)</figcaption>
@@ -51,7 +36,7 @@
 <br>
 <br>
 
-!!! Quote "Other Definitions"
+!!! Quote "Definitions of Open Science"
 
     "Open Science is defined as an inclusive construct that combines various movements and practices aiming to make multilingual scientific knowledge openly  available,  accessible  and  reusable  for  everyone,  to  increase  scientific  collaborations  and  sharing of information for the benefits of science and society, and to open the processes of scientific knowledge creation, evaluation and communication to societal actors beyond the traditional scientific community." - [UNESCO Definition](https://www.unesco.org/en/natural-sciences/open-science){target=_blank}
 
@@ -61,6 +46,8 @@
 <br>
 
 ## Foundational Open Science Skills
+
+The original CyVerse FOSS workshop is designed to:
 
 <span style="font-size:1.2em;">_1. Building a culture of scientists eager to share research materials - such as data, code, methods, documentation, and early results - with colleagues and society at large, in addition to traditional publications_</span> 
 
@@ -127,7 +114,7 @@ NASA leads a prominent program called [Transform to Open Science](https://github
 
 ## **:material-pillar: 6 Pillars of Open Science**
 
-**:material-pillar: Open Access Publications**
+[**:material-pillar: Open Access Publications**](## **:material-pillar: Open Access Publications**)
 
 **:material-pillar: Open Data**
 
