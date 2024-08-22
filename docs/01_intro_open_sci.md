@@ -114,17 +114,17 @@ NASA leads a prominent program called [Transform to Open Science](https://github
 
 ## **:material-pillar: 6 Pillars of Open Science**
 
-[**:material-pillar: Open Access Publications**](## **:material-pillar: Open Access Publications**)
+[**:material-pillar: Open Access Publications**](#open-access-publications)
 
-**:material-pillar: Open Data**
+[**:material-pillar: Open Data**](#open-data)
 
-**:material-pillar: Open Educational Resources**
+[**:material-pillar: Open Educational Resources**](#open-educational-resources)
 
-**:material-pillar: Open Methodology**
+[**:material-pillar: Open Methodology**](#open-methodology)
       
-**:material-pillar: Open Peer Review**
+[**:material-pillar: Open Peer Review**](#open-peer-review)
 
-**:material-pillar: Open Source Software**
+[**:material-pillar: Open Source Software**](#open-source-software)
 
 ??? Question "Wait, how many pillars :material-pillar: of Open Science Are There Really?"
 
