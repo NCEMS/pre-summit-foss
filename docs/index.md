@@ -1,5 +1,5 @@
 <figure markdown>
-  [![!NCEMS](assets/ncems-logo.png "NCEMS"){ width="400" }](https://ncems.psu.edu){target=_blank}
+  [![!NCEMS](assets/NSF-NCEMS-Blue.svg "NCEMS"){ width="400" }](https://ncems.psu.edu){target=_blank}
 </figure>
 
 # Welcome to NCEMS Pre Summit Foundational Open Science Skills (FOSS) Training!
