@@ -2,7 +2,7 @@
 
 Documentation based upon CyVerse Learning's Foundations of Open Science Skills (FOSS) course. 
 
-Course will take place Sept. 4 - September 22, 2024, online, Every Wednesday 11 am - 12:30 pm PST
+Course will take place Sept. 4 - September 25, 2024, online, Every Wednesday 11 am - 12:30 pm PST
 
 See the schedule at https://ncems.github.io/pre-summit-foss/schedule/
 
