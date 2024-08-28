@@ -165,6 +165,8 @@ NASA leads a prominent program called [Transform to Open Science](https://github
     - [MDPI](https://www.mdpi.com/){target=_blank}
     - [Ecosphere](https://esajournals.onlinelibrary.wiley.com/journal/21508925){target=_blank}
 
+    [Directory of Open Access Journals](https://doaj.org/){target=_blank}
+
 <br>
 <br>
 
