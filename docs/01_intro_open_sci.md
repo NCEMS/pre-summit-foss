@@ -13,6 +13,8 @@
 <br>
 <br>
 
+HackMD: https://hackmd.io/tLnlwjjTSoGG8U2yPHWQJw 
+
 ## What is Open Science?
 
 <br>
