@@ -382,6 +382,50 @@ There are many circumstances where open data could be harmful:
 
 * Data for making [lethal weapons](https://www.theverge.com/2022/3/17/22983197/ai-new-possible-chemical-weapons-generative-models-vx)
 
+    ??? tip "TRUST Principles"
+
+        [Lin et al. 2020](https://www.nature.com/articles/s41597-020-0486-7){target=_blank} The TRUST Principles for digital repositories
+    
+        *Transparency*
+    
+        - Terms of use, both for the repository and for the data holdings.
+    
+        - Minimum digital preservation timeframe for the data holdings.
+    
+        - Any pertinent additional features or services, for example the capacity to responsibly steward sensitive data.
+    
+        *Responsibility*
+    
+        - Adhering to the designated community’s metadata and curation standards, along with providing stewardship of the data holdings e.g. technical validation, documentation, quality control, authenticity protection, and long-term persistence.
+    
+        - Providing data services e.g. portal and machine interfaces, data download or server-side processing.
+    
+        - Managing the intellectual property rights of data producers, the protection of sensitive information resources, and the security of the system and its content.
+    
+        *User focus*
+    
+        - Implementing relevant data metrics and making these available to users.
+    
+        - Providing (or contributing to) community catalogues to facilitate data discovery.
+    
+        - Monitoring and identifying evolving community expectations and responding as required to meet these changing needs.
+    
+        *Sustainability*
+    
+        - Planning sufficiently for risk mitigation, business continuity, disaster recovery, and succession.
+    
+        - Securing funding to enable ongoing usage and to maintain the desirable properties of the data resources that the repository has been entrusted with preserving and disseminating.
+    
+        - Providing governance for necessary long-term preservation of data so that data resources remain discoverable, accessible, and usable in the future.
+    
+        *Technology*
+    
+        - Implementing relevant and appropriate standards, tools, and technologies for data management and curation.
+    
+        - Having plans and mechanisms in place to prevent, detect, and respond to cyber or physical security threats.
+
+    
+
 <br>
 <br>
 
@@ -702,7 +746,8 @@ A paper from [Bartling & Friesike (2014)](https://doi.org/10.1007/978-3-319-0002
 3.  **Infrastructure school**: primarily focused on the platforms, tools, and services necessary to conduct efficient research, collaboration, and communication
 4.  **Public school**: primarily concerned with societal impact of scholarly work, focusing on engagement with broader public via citizen science, understandable scientific communication, and less formal communication
 5.  **Measurement school**: primarily concerned with the existing focus on journal publications as a means of measuring scholarly output, and focused on developing alternative measurements of scientific impact
-6. **Compliance school**: government, universities, and granting agencies have embraced Open Science and are mandating some elements (e.g., data sharing with publications)
+   
+Government, universities, and granting agencies have embraced Open Science and [are mandating some elements (e.g., the Nelson Memo)](https://www.whitehouse.gov/wp-content/uploads/2022/08/08-2022-OSTP-Public-access-Memo.pdf)}target=_blank}
 
 <figure markdown>
   <a href="https://library.oapen.org/bitstream/handle/20.500.12657/28008/1001989.pdf" target="blank" rel="fecher_friesike">![fecher_friesike](assets/five_schools.png){ width="700" } </a>
