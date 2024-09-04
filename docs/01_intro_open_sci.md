@@ -236,8 +236,8 @@ NASA leads a prominent program called [Transform to Open Science](https://github
 
     Elsevier requires authors to sign over copyright of the article but authors retains some rights of distribution
 
-    - [Elesevier summary of copyright policies](https://www.elsevier.com/about/policies-and-standards/copyright#1-author-rights)
-    - [Elesevier article sharing policy](https://www.elsevier.com/about/policies-and-standards/sharing)
+    - [Elsevier summary of copyright policies](https://www.elsevier.com/about/policies-and-standards/copyright#1-author-rights)
+    - [Elsevier article sharing policy](https://www.elsevier.com/about/policies-and-standards/sharing)
     - [Wiley policy on self-archiving](https://authorservices.wiley.com/author-resources/Journal-Authors/licensing/self-archiving.html)
     - [Springer Nature copyright policies](https://www.springer.com/gp/open-access/publication-policies/copyright-transfer#:~:text=Springer%20Nature%20authors%20retain%20copyright,found%20in%20our%20publishing%20policies.)
 
