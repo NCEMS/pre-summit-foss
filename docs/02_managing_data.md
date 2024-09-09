@@ -14,7 +14,7 @@
 Ensuring that data are effectively organized, shared, and preserved
 is critical to making your science impactful, efficient, and open.
 
-??? Danger
+??? Danger "Don't forget about Data Management"
 
     The biggest challenge to data management is **making it an afterthought**.
 
@@ -142,8 +142,6 @@ DMP Tool [Data management general guidance](https://dmptool.org/general_guidance
     Image from [Strasser *et al*](https://www.dataone.org/sites/all/documents/DataONE_BP_Primer_020212.pdf).
 
 
-
-
 The summary below is adapted from the excellent [DataONE best practices primer](https://old.dataone.org/sites/all/documents/DataONE_BP_Primer_020212.pdf).
 
 ### Plan
@@ -178,14 +176,15 @@ The summary below is adapted from the excellent [DataONE best practices primer](
     files, date(s) created or modified, related datasets) including
     the people and organizations involved in data collection (e.g.,
     authors, affiliations, sponsor). Also include:
-    -   An [ORCID](https://orcid.org/) (obtain one if you don't have one).
-    -   The scientific context (reason for collecting the data, how they were collected, equipment and software used to generate the data, conditions during data collection, spatial and temporal resolution)
-    -   The data themselves
-    -   How each measurement was produced
-    -   Units
-    -   Format
-    -   Quality assurance activities
-    -   Precision, accuracy, and uncertainty
+    
+        -   An [ORCID](https://orcid.org/) (obtain one if you don't have one).
+        -   The scientific context (reason for collecting the data, how they were collected, equipment and software used to generate the data, conditions during data collection, spatial and temporal resolution)
+        -   The data themselves
+        -   How each measurement was produced
+        -   Units
+        -   Format
+        -   Quality assurance activities
+        -   Precision, accuracy, and uncertainty
 
 
 Some metadata standards you may want to consider:
@@ -257,12 +256,19 @@ In general, data must be preserved in an appropriate long-term archive
 <br/>
 <br/>
 
-## FAIR Data
+## The Principles of Open Data Management
 
 !!! Info "Learning Objectives"
-    -   Recall the meaning of FAIR
-    -   Understand why FAIR is a collection of principles (rather than rules)
-    -   Use self-assessments to evaluate the FAIRness of your data
+
+    -   Recall the meanings of FAIR, CARE, and TRUST
+    -   Understand why FAIR are ideals (rather than hard rules)
+    -   Use self-assessments to evaluate the FAIR-ness of your data
+
+??? Question "Why do we have data principles?"
+
+    FAIR, CARE, and TRUST are collections of principles from different types of communities with different objectives. 
+    
+    Ultimately, different communities within different scientific disciplines must work to interpret and implement these principles. Because technologies change quickly, focusing on the desired end result allows FAIR to be applied to a variety of situations now and in the foreseeable future.
 
 ### FAIR Principles
 
@@ -302,27 +308,35 @@ published in Scientific Data. Read it.
 -   R1.2. (meta)data are associated with detailed provenance
 -   R1.3. (meta)data meet domain-relevant community standard
 
-!!! Tip
-
-    Open vs. Public vs. FAIR:
-
+!!! Tip "Open vs. Public vs. FAIR"
+    
     FAIR does not demand that data be open: See one definition of open:
-    http://opendefinition.org/
+        
+    [http://opendefinition.org/](http://opendefinition.org/){target=_blank}
 
-!!! Tip
+??? Tip "How to be more FAIR with your data?" 
 
-    **Why Principles?**
+    This is a question that only you can answer, that is because it depends
+    on (among other things)
+    
+    1.  Your datatypes and existing standards for what constitutes acceptable data management will vary.
+    
+    2.  The extent to which your scientific community has implemented FAIR: Some disciplines have significant guidelines on FAIR, while others have not addressed the subject in any concerted way.
+    
+    3.  Your level of technical skills: Some approaches to implementing FAIR may require technical skills you may not yet feel comfortable with.
+    
+    While a lot is up to you, the first step is to evaluate how FAIR you think your data are:
 
-    FAIR is a collection of principles. Ultimately, different
-    communities within different scientific disciplines must work to
-    interpret and implement these principles. Because technologies
-    change quickly, focusing on the desired end result allows FAIR to be
-    applied to a variety of situations now and in the foreseeable
-    future.
+!!! Question "Self Assessment"
+
+    Thinking about a dataset you work with, complete the ARDC [FAIR assessment](https://ardc.edu.au/resource/fair-data-self-assessment-tool/){target=_blank}
+
+    What did you learn about yourself and your data?
+
 
 ### CARE Principles
 
-The [CARE Principles](https://www.gida-global.org/care) for Indigenous Data Governance were drafted at the International Data Week and Research Data Alliance Plenary co-hosted event "Indigenous Data Sovereignty Principles for the Governance of Indigenous Data Workshop," 8 November 2018, Gaborone, Botswana.
+The [CARE Principles](https://www.gida-global.org/care){target=_blank} for Indigenous Data Governance were drafted at the International Data Week and Research Data Alliance Plenary co-hosted event "Indigenous Data Sovereignty Principles for the Governance of Indigenous Data Workshop," 8 November 2018, Gaborone, Botswana.
 
 **Collective Benefit**
 
@@ -349,41 +363,70 @@ The [CARE Principles](https://www.gida-global.org/care) for Indigenous Data Gove
 -   E3. For future use
 
 
-!!! Tip "Connecting FOSS and CARE: [Lydia Jennings](https://nativesoilnerd.com/)"
+!!! Tip "Connecting FOSS and CARE: [FOSS Alumnus Dr. Lydia Jennings](https://nativesoilnerd.com/){target=_blank"
 
-    Dr. Lydia Jennings was a Data Science Fellow at the University of Arizona, who attended FOSS in  Fall of 2022.      
-    Lydia graduated from the University of Arizona's Department of Evironemtal Sciences, and has published a paper on the application of the CARE principles to ecology and biodiversity research.
-    Go Lydia!
-    [Appying the 'CARE Principles for Indigenous Data Governance' to ecology and biodiversity](https://www.nature.com/articles/s41559-023-02161-2), *Nature Ecology & Evolution*, 2023. 
+    Dr. Lydia Jennings was a Data Science Fellow at the University of Arizona who attended FOSS in Fall of 2022.
+    
+    Lydia graduated from the University of Arizona's Department of Evironemtal Sciences in 2023 and has published a paper on the application of the CARE principles to ecology and biodiversity research.
+    
+    [Appying the 'CARE Principles for Indigenous Data Governance' to ecology and biodiversity](https://www.nature.com/articles/s41559-023-02161-2){target=_blank} *Nature Ecology & Evolution*, 2023. 
 
-??? Note "Resources"
+!!! Note "More Resources for CARE & Indigenous Rights"
 
     - [The FAIR Guiding Principles for scientific data management and stewardship](<https://www.nature.com/articles/sdata201618>)
+    
     - [Wilkinson et al. (2016)](https://doi.org/10.1038/sdata.2016.18){target=_blank} established the guidelines to improve the Findability, Accessibility, Interoperability, and Reuse (FAIR) of digital assets for research. 
+    
     - [Go-FAIR website](https://www.go-fair.org/fair-principles/){target=_blank}
+    
     - [Carroll et al. (2020)](http://doi.org/10.5334/dsj-2020-043){target=_blank} established the CARE Principles for Indigenous Data Governance. [full document :fontawesome-solid-file-pdf:](https://static1.squarespace.com/static/5d3799de845604000199cd24/t/5da9f4479ecab221ce848fb2/1571419335217/CARE+Principles_One+Pagers+FINAL_Oct_17_2019.pdf){target=_blank}
+    
     - [Indigenous Data Sovereignty Networks](https://indigenousdatalab.org/networks/){target=_blank}
 
+    - [Local Contexts](https://localcontexts.org){target=_blank}
 
-### How to get to FAIR?
+### TRUST Principles 
 
-This is a question that only you can answer, that is because it depends
-on (among other things)
+[Lin et al. 2020](https://www.nature.com/articles/s41597-020-0486-7){target=_blank} The TRUST Principles for digital repositories
+    
+**Transparency**
+    
+- Terms of use, both for the repository and for the data holdings.
+    
+- Minimum digital preservation timeframe for the data holdings.
+    
+- Any pertinent additional features or services, for example the capacity to responsibly steward sensitive data.
+    
+**Responsibility**
+   
+- Adhering to the designated community’s metadata and curation standards, along with providing stewardship of the data holdings e.g. technical validation, documentation, quality control, authenticity protection, and long-term persistence.
+    
+- Providing data services e.g. portal and machine interfaces, data download or server-side processing.
+    
+- Managing the intellectual property rights of data producers, the protection of sensitive information resources, and the security of the system and its content.
+    
+**User focus**
+    
+- Implementing relevant data metrics and making these available to users.
+    
+- Providing (or contributing to) community catalogues to facilitate data discovery.
+    
+- Monitoring and identifying evolving community expectations and responding as required to meet these changing needs.
+    
+**Sustainability**
+    
+- Planning sufficiently for risk mitigation, business continuity, disaster recovery, and succession.
+    
+- Securing funding to enable ongoing usage and to maintain the desirable properties of the data resources that the repository has been entrusted with preserving and disseminating.
+    
+- Providing governance for necessary long-term preservation of data so that data resources remain discoverable, accessible, and usable in the future.
+    
+**Technology**
+    
+- Implementing relevant and appropriate standards, tools, and technologies for data management and curation.
+    
+- Having plans and mechanisms in place to prevent, detect, and respond to cyber or physical security threats.
 
-1.  Your scientific discipline: Your datatypes and existing standards
-    for what constitutes acceptable data management will vary.
-2.  The extent to which your scientific community has implemented
-    FAIR: Some disciplines have significant guidelines on FAIR, while
-    others have not addressed the subject in any concerted way.
-3.  Your level of technical skills: Some approaches to implementing
-    FAIR may require technical skills you may not yet feel comfortable
-    with.
-
-While a lot is up to you, the first step is to evaluate how FAIR you
-think your data are:
-
-!!! Question "Exercise"
-    Thinking about a dataset you work with, complete the ARDC [FAIR assessment](https://ardc.edu.au/resource/fair-data-self-assessment-tool/).
 
 ---
 
