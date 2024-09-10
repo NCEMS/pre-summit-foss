@@ -286,10 +286,10 @@ published in Scientific Data. Read it.
 
 -   A1. (meta)data are retrievable by their identifier using a
     standardized communications protocol
--   A1.1 the protocol is open, free, and universally implementable
--   A1.2 the protocol allows for an authentication and authorization
+-   A2. the protocol is open, free, and universally implementable
+-   A3. the protocol allows for an authentication and authorization
     procedure, where necessary
--   A2. metadata are accessible, even when the data are no longer
+-   A4. metadata are accessible, even when the data are no longer
     available
 
 **Interoperable**
@@ -303,14 +303,14 @@ published in Scientific Data. Read it.
 
 -   R1. meta(data) are richly described with a plurality of accurate
     and relevant attributes
--   R1.1. (meta)data are released with a clear and accessible data
+-   R2. (meta)data are released with a clear and accessible data
     usage license
--   R1.2. (meta)data are associated with detailed provenance
--   R1.3. (meta)data meet domain-relevant community standard
+-   R3. (meta)data are associated with detailed provenance
+-   R4. (meta)data meet domain-relevant community standard
 
 !!! Tip "Open vs. Public vs. FAIR"
     
-    FAIR does not demand that data be open: See one definition of open:
+    FAIR does not demand that data be open: See one definition of "Open":
         
     [http://opendefinition.org/](http://opendefinition.org/){target=_blank}
 
