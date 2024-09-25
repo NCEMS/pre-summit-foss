@@ -64,6 +64,9 @@ theme:
     - navigation.tabs.sticky
     - navigation.indexes
     - navigation.top
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
   favicon: assets/favicon.ico
   icon:
     logo: material/molecule
