@@ -1,0 +1,1869 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Workshop teaching researchers core skills for conducting open science.">
+      
+      
+        <meta name="author" content="Tyson Swetnam, Nicole Lazar">
+      
+      
+        <link rel="canonical" href="https://ncems.github.io/pre-summit-foss/02_managing_data/">
+      
+      
+        <link rel="prev" href="../01_intro_open_sci/">
+      
+      
+        <link rel="next" href="../03_project_management/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>2. Data Management - NCEMS Pre-Summit Open Science Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRegular:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Regular"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="ncems" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#managing-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="NCEMS Pre-Summit Open Science Training" class="md-header__button md-logo" aria-label="NCEMS Pre-Summit Open Science Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.27 10 9 7h5.42l1.16-2-.08-.5A1.5 1.5 0 0 1 17 3a1.5 1.5 0 0 1 1.5 1.5c0 .71-.5 1.31-1.17 1.46l-.96 1.67L17.73 10l.86-1.5-.09-.5A1.5 1.5 0 0 1 20 6.5 1.5 1.5 0 0 1 21.5 8c0 .71-.5 1.3-1.15 1.46L18.89 12l1.73 3c.77.07 1.38.71 1.38 1.5a1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.5-1.5v-.26L17.73 14l-1.36 2.37.96 1.67a1.5 1.5 0 0 1 1.17 1.46A1.5 1.5 0 0 1 17 21a1.5 1.5 0 0 1-1.5-1.5l.08-.5-1.16-2h-3.84l-1.16 2 .08.5A1.5 1.5 0 0 1 8 21a1.5 1.5 0 0 1-1.5-1.5c0-.71.5-1.31 1.17-1.46l.96-1.67L4.38 9C3.61 8.93 3 8.29 3 7.5A1.5 1.5 0 0 1 4.5 6 1.5 1.5 0 0 1 6 7.5v.26zm2.88-1-1.73 3 1.73 3h4.7l1.73-3-1.73-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NCEMS Pre-Summit Open Science Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. Data Management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="ncems" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/NCEMS/pre-summit-foss" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    NCEMS/pre-summit-foss
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01_intro_open_sci/" class="md-tabs__link">
+          
+  
+    
+  
+  Lessons
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="NCEMS Pre-Summit Open Science Training" class="md-nav__button md-logo" aria-label="NCEMS Pre-Summit Open Science Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.27 10 9 7h5.42l1.16-2-.08-.5A1.5 1.5 0 0 1 17 3a1.5 1.5 0 0 1 1.5 1.5c0 .71-.5 1.31-1.17 1.46l-.96 1.67L17.73 10l.86-1.5-.09-.5A1.5 1.5 0 0 1 20 6.5 1.5 1.5 0 0 1 21.5 8c0 .71-.5 1.3-1.15 1.46L18.89 12l1.73 3c.77.07 1.38.71 1.38 1.5a1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.5-1.5v-.26L17.73 14l-1.36 2.37.96 1.67a1.5 1.5 0 0 1 1.17 1.46A1.5 1.5 0 0 1 17 21a1.5 1.5 0 0 1-1.5-1.5l.08-.5-1.16-2h-3.84l-1.16 2 .08.5A1.5 1.5 0 0 1 8 21a1.5 1.5 0 0 1-1.5-1.5c0-.71.5-1.31 1.17-1.46l.96-1.67L4.38 9C3.61 8.93 3 8.29 3 7.5A1.5 1.5 0 0 1 4.5 6 1.5 1.5 0 0 1 6 7.5v.26zm2.88-1-1.73 3 1.73 3h4.7l1.73-3-1.73-3z"/></svg>
+
+    </a>
+    NCEMS Pre-Summit Open Science Training
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/NCEMS/pre-summit-foss" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    NCEMS/pre-summit-foss
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href=".." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code_of_conduct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code of Conduct
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary & Acronyms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Lessons
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_intro_open_sci/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Open Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2. Data Management
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2. Data Management
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-should-you-care-about-data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why should you care about data management?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-self-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Self-assessment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-data-life-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Data Life Cycle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Data Life Cycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Describe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preserve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preserve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discover" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discover
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyze" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyze
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      References and Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-principles-of-open-data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Principles of Open Data Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Principles of Open Data Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fair-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAIR Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#care-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      CARE Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      TRUST Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-and-resources_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      References and Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-management-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Management Plans
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Management Plans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-dmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a DMP?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licenses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Licenses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#license-options-from-uarizona-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      License Options from UArizona Library
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-and-resources_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      References and Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self Assessment
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_project_management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Project Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_talk_to_computer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. How to Talk to Computers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-should-you-care-about-data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why should you care about data management?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-self-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Self-assessment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-data-life-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Data Life Cycle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Data Life Cycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Describe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preserve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preserve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discover" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discover
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyze" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyze
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      References and Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-principles-of-open-data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Principles of Open Data Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Principles of Open Data Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fair-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAIR Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#care-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      CARE Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      TRUST Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-and-resources_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      References and Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-management-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Management Plans
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Management Plans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-dmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a DMP?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licenses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Licenses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#license-options-from-uarizona-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      License Options from UArizona Library
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-and-resources_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      References and Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self Assessment
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/NCEMS/pre-summit-foss/edit/mkdocs/docs/02_managing_data.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/NCEMS/pre-summit-foss/raw/mkdocs/docs/02_managing_data.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="managing-data">Managing Data<a class="headerlink" href="#managing-data" title="Permanent link">&para;</a></h1>
+<div class="admonition success">
+<p class="admonition-title">Learning Objectives</p>
+<p>After this lesson, you should be able to:</p>
+<ul>
+<li>Recognize data as the foundation of open science and be able to describe the "life cycle of data"</li>
+<li>Use self-assessments to evaluate your current data management practices</li>
+<li>Cite tools and resources to improve your data management practices</li>
+<li>Know the biggest challenge to effective data management</li>
+</ul>
+</div>
+<h2 id="why-should-you-care-about-data-management">Why should you care about data management?<a class="headerlink" href="#why-should-you-care-about-data-management" title="Permanent link">&para;</a></h2>
+<p>Ensuring that data are effectively organized, shared, and preserved
+is critical to making your science impactful, efficient, and open.</p>
+<details class="danger">
+<summary>Don't forget about Data Management</summary>
+<p>The biggest challenge to data management is <strong>making it an afterthought</strong>.</p>
+<p>Unfortunately, poor data management doesn't have a high upfront cost.
+You can do substantial work before realizing you are in trouble. Like
+a swimmer in rip current, by the time you realize you are in trouble,
+you may already be close to drowning.</p>
+<p>The solution? Make data management the first thing you consider when
+starting a research project. It also needs to be a policy you
+institute right away for your research group.</p>
+</details>
+<details class="question">
+<summary>How would you answer?</summary>
+<ul>
+<li>If you give your data to a colleague who has not been involved with your project, would they be able to make sense of it? Would they be able to use it properly?</li>
+<li>If you come back to your own data in five years, will you be able to make sense of it? Will you be able to use it properly?</li>
+<li>When you are ready to publish a paper, is it easy to find all the correct versions of all the data you used and present them in a comprehensible manner?</li>
+</ul>
+</details>
+<p>Well-managed Data Sets:</p>
+<ul>
+<li>Make life much easier for you and your collaborators</li>
+<li>Benefit the scientific research community by allowing others to reuse your data</li>
+<li>Are required by most funders and many journals</li>
+<li>Recent <a href="https://www.nsf.gov/pubs/2019/nsf19069/nsf19069.jsp" target="_blank">Dear Colleague letter</a> from NSF</li>
+<li>NSF <a href="https://new.nsf.gov/policies/pappg/23-1/ch-2-proposal-preparation#2D2i-ii" target="_blank">proposal preparation guidelines</a></li>
+</ul>
+<hr />
+<p><br/>
+<br/></p>
+<h2 id="data-types">Data Types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h2>
+<p>Different types of data require different management practices. What are
+some data types and sources you might use in your work? (Adapted from
+DMP Tool <a href="https://dmptool.org/general_guidance#types-of-data">Data management general guidance</a>)</p>
+<p><strong>Data Types</strong></p>
+<ul>
+<li>Text: field or laboratory notes, survey responses</li>
+<li>Numeric: tables, counts, measurements</li>
+<li>Audiovisual: images, sound recordings, video</li>
+<li>Models, computer code</li>
+<li>Discipline-specific: FASTA in biology, FITS in astronomy, CIF in chemistry</li>
+<li>Instrument-specific: equipment outputs</li>
+</ul>
+<p><strong>Data Sources</strong></p>
+<p><em>Observational</em></p>
+<ul>
+<li>Captured in real-time, typically outside the lab</li>
+<li>Usually irreplaceable and therefore the most important to safeguard</li>
+<li>Examples: Sensor readings, telemetry, survey results, images</li>
+</ul>
+<p><em>Experimental</em></p>
+<ul>
+<li>Typically generated in the lab or under controlled conditions</li>
+<li>Often reproducible, but can be expensive or time-consuming</li>
+<li>Examples: gene sequences, chromatograms, magnetic field readings</li>
+</ul>
+<p><em>Simulation</em></p>
+<ul>
+<li>Machine generated from test models</li>
+<li>Likely to be reproducible if the model and inputs are preserved</li>
+<li>Examples: climate models, economic models</li>
+</ul>
+<p><em>Derived / Compiled</em></p>
+<ul>
+<li>Generated from existing datasets</li>
+<li>Reproducible, but can be very expensive and time-consuming</li>
+<li>Examples: text and data mining, compiled database, 3D models</li>
+</ul>
+<p><br/>
+<br/></p>
+<h2 id="data-self-assessment">Data Self-assessment<a class="headerlink" href="#data-self-assessment" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Activity</p>
+<p>In small groups, discuss the following questions. You will be provided with a space for documenting our shared answers.</p>
+<p>1. What are the two or three data types that you most frequently work with?
+        -   Think about the sources (observational, experimental, simulated, compiled/derived)
+        -   Also consider the formats (tabular, sequence, database, image, etc.)</p>
+<p>2.  What is the scale of your data?</p>
+<details class="tip">
+<summary>Tip</summary>
+<p>We often talk about the scale of data using the <a href="https://www.bigdataframework.org/four-vs-of-big-data/">"Three V's"</a>:</p>
+<ul>
+<li>Volume: Size of the data (MBs, GBs, TBs); can also include how many files (e.g dozens of big files, or millions of small ones)</li>
+<li>Velocity: How quickly are these data produced and analyzed? A lot coming in a single batch infrequently, or, a constant small amount of data that must be rapidly analyzed?</li>
+<li>Variety: How many different data types (raw files? databases?)
+A fourth V (Veracity) captures the need to make decisions about data processing (i.e., separating low- and high-quality data)</li>
+</ul>
+</details>
+<p>3.  What is your strategy for storing and backing up your data?</p>
+<p>4.  What is your strategy for verifying the integrity of your data? (i.e. verifying that your data has not be altered)</p>
+<p>5.  What is your strategy for searching your data?</p>
+<p>6.  What is your strategy for sharing (and getting credit for) your data? (i.e. How will do you share with your community/clients? How is that sharing documented? How do you evaluate the impact of data shared? )</p>
+</div>
+<hr />
+<p><br/>
+<br/></p>
+<h2 id="the-data-life-cycle">The Data Life Cycle<a class="headerlink" href="#the-data-life-cycle" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>The Data Life Cycle</strong></p>
+<p><em>Data management</em> is the set of practices that allow researchers to
+effectively and efficiently handle data throughout the data life
+cycle. Although typically shown as a circle (below) the actually
+life cycle of any data item may follow a different path, with
+branches and internal loops. Being aware of your data's future
+helps you plan how to best manage them.</p>
+<p><img alt="lifecycle" src="../assets/data_life_cycle.png" /></p>
+<p>Image from <a href="https://www.dataone.org/sites/all/documents/DataONE_BP_Primer_020212.pdf">Strasser <em>et al</em></a>.</p>
+</div>
+<p>The summary below is adapted from the excellent <a href="https://old.dataone.org/sites/all/documents/DataONE_BP_Primer_020212.pdf">DataONE best practices primer</a>.</p>
+<h3 id="plan">Plan<a class="headerlink" href="#plan" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Describe the data that will be compiled, and how the data will be managed and made accessible throughout its lifetime</li>
+<li>A good plan considers each of the stages below</li>
+</ul>
+<h3 id="collect">Collect<a class="headerlink" href="#collect" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Have a plan for data organization in place before collecting data</li>
+<li>Collect and store observation metadata at the same time you collect the metadata</li>
+<li>Take advantage of machine generated metadata</li>
+</ul>
+<h3 id="assure">Assure<a class="headerlink" href="#assure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Record any conditions during collection that might affect the quality of the data</li>
+<li>Distinguish estimated values from measured values</li>
+<li>Double check any data entered by hand</li>
+<li>Perform statistical and graphical summaries (e.g., max/min, average, range) to check for questionable or impossible values.</li>
+<li>Mark data quality, outliers, missing values, etc.</li>
+</ul>
+<h3 id="describe">Describe<a class="headerlink" href="#describe" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Comprehensive data documentation (i.e. <strong>metadata</strong>) is the key to
+    future understanding of data. Without a thorough description of
+    the context of the data, the context in which they were collected,
+    the measurements that were made, and the quality of the data, it
+    is unlikely that the data can be easily discovered, understood, or
+    effectively used.</p>
+</li>
+<li>
+<p>Thoroughly describe the dataset (e.g., name of dataset, list of
+    files, date(s) created or modified, related datasets) including
+    the people and organizations involved in data collection (e.g.,
+    authors, affiliations, sponsor). Also include:</p>
+<div class="highlight"><pre><span></span><code>-   An [ORCID](https://orcid.org/) (obtain one if you don&#39;t have one).
+-   The scientific context (reason for collecting the data, how they were collected, equipment and software used to generate the data, conditions during data collection, spatial and temporal resolution)
+-   The data themselves
+-   How each measurement was produced
+-   Units
+-   Format
+-   Quality assurance activities
+-   Precision, accuracy, and uncertainty
+</code></pre></div>
+</li>
+</ul>
+<p>Some metadata standards you may want to consider:</p>
+<ul>
+<li><a href="https://schema.datacite.org/">DataCite</a> for publishing data</li>
+<li><a href="http://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core</a> for sharing data on the web</li>
+<li><a href="https://press3.mcs.anl.gov/gensc/mixs/">MIxS</a> Minimum Information for any (x) sequence</li>
+<li><a href="https://www.opengeospatial.org/docs/is">OGC standards</a> for geospatial data</li>
+</ul>
+<p><strong>Ontologies</strong> provide standardization for metadata values:</p>
+<ul>
+<li>Example: <a href="http://environmentontology.org/">Environment Ontology</a> terms for the MIxS standards</li>
+<li>Example: <a href="http://planteome.org/">Plant Ontology</a> for plant tissue types or development stages</li>
+<li><a href="https://fairsharing.org/">FAIRSharing.org</a> lists standards and ontologies for life sciences.</li>
+</ul>
+<h3 id="preserve">Preserve<a class="headerlink" href="#preserve" title="Permanent link">&para;</a></h3>
+<p>In general, data must be preserved in an appropriate long-term archive
+(i.e. data center). Here are some examples:</p>
+<ul>
+<li>Sequence data should go to a national repository, frequently <a href="https://www.ncbi.nlm.nih.gov/">NCBI</a></li>
+<li>Identify data with value - it may not be necessary to preserve all data from a project</li>
+<li>The CyVerse <a href="http://datacommons.cyverse.org/">Data Commons</a> provides a place to publish and preserve data that was generated on or can be used in CyVerse, where no other repository exists.</li>
+<li>See lists of repositories at <a href="https://fairsharing.org/">FAIRSharing.org</a></li>
+<li>See lists of repositories at <a href="https://datadryad.org/stash">Data Dryad</a></li>
+<li>Github repos can get DOIs through <a href="https://guides.github.com/activities/citable-code/">Zenodo</a></li>
+<li>Be aware of licensing and other intellectual property issues<ul>
+<li>Repositories will require some kind of license, often the
+    least restrictive (see for example <a href="https://creativecommons.org/">Creative Commons</a>)</li>
+<li>Repositories are unlikely to enforce reuse restrictions, even
+    if you apply them.</li>
+</ul>
+</li>
+</ul>
+<h3 id="discover">Discover<a class="headerlink" href="#discover" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Good metadata allows you to discover your own data!</li>
+<li>Databases, repositories, and search indices provide ways to
+    discover relevant data for reuse <ul>
+<li><a href="https://toolbox.google.com/datasetsearch">Google dataset search</a></li>
+<li><a href="https://www.dataone.org/">DataOne</a></li>
+<li><a href="https://fairsharing.org/">FAIRSharing.org</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="integrate">Integrate<a class="headerlink" href="#integrate" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Data integration is a lot of work</li>
+<li>Standards and ontologies are key to future data integration</li>
+<li>Know the data before you integrate them</li>
+<li>Don't trust that two columns with the same header are the same data</li>
+<li>Properly cite the data you reuse!</li>
+<li>Use DOIs (<a href="https://en.wikipedia.org/wiki/Digital_object_identifier">Digital Object Identifiers</a>) wherever possible</li>
+</ul>
+<h3 id="analyze">Analyze<a class="headerlink" href="#analyze" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Follow open science principles for reproducible analyses (CyVerse,
+    RStudio, notebooks, IDEs)</li>
+<li>State your hypotheses and analysis workflow before collecting
+    data. Tools like <a href="https://osf.io/">Open Science Framework</a> (OSF) allow you to make this public.</li>
+<li>Record all software, parameters, inputs, etc.</li>
+</ul>
+<hr />
+<h3 id="references-and-resources">References and Resources<a class="headerlink" href="#references-and-resources" title="Permanent link">&para;</a></h3>
+<p><a href="https://dataoneorg.github.io/Education/bestpractices/">DataOne best practices</a></p>
+<p><a href="https://cos.io/">Center for Open Science</a></p>
+<hr />
+<p><br/>
+<br/></p>
+<h2 id="the-principles-of-open-data-management">The Principles of Open Data Management<a class="headerlink" href="#the-principles-of-open-data-management" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Learning Objectives</p>
+<ul>
+<li>Recall the meanings of FAIR, CARE, and TRUST</li>
+<li>Understand why FAIR are ideals (rather than hard rules)</li>
+<li>Use self-assessments to evaluate the FAIR-ness of your data</li>
+</ul>
+</div>
+<details class="question">
+<summary>Why do we have data principles?</summary>
+<p>FAIR, CARE, and TRUST are collections of principles from different types of communities with different objectives. </p>
+<p>Ultimately, different communities within different scientific disciplines must work to interpret and implement these principles. Because technologies change quickly, focusing on the desired end result allows FAIR to be applied to a variety of situations now and in the foreseeable future.</p>
+</details>
+<h3 id="fair-principles">FAIR Principles<a class="headerlink" href="#fair-principles" title="Permanent link">&para;</a></h3>
+<p>In 2016, the <a href="https://www.nature.com/articles/sdata201618">FAIR Guiding Principles</a> for scientific data management and stewardship were
+published in Scientific Data. Read it.</p>
+<p><strong>Findable</strong></p>
+<ul>
+<li>F1. (meta)data are assigned a globally unique and persistent identifier</li>
+<li>F2. data are described with rich metadata (defined by R1 below)</li>
+<li>F3. metadata clearly and explicitly include the identifier of the data it describes</li>
+<li>F4. (meta)data are registered or indexed in a searchable resource</li>
+</ul>
+<p><strong>Accessible</strong></p>
+<ul>
+<li>A1. (meta)data are retrievable by their identifier using a
+    standardized communications protocol</li>
+<li>A2. the protocol is open, free, and universally implementable</li>
+<li>A3. the protocol allows for an authentication and authorization
+    procedure, where necessary</li>
+<li>A4. metadata are accessible, even when the data are no longer
+    available</li>
+</ul>
+<p><strong>Interoperable</strong></p>
+<ul>
+<li>I1. (meta)data use a formal, accessible, shared, and broadly
+    applicable language for knowledge representation.</li>
+<li>I2. (meta)data use vocabularies that follow FAIR principles</li>
+<li>I3. (meta)data include qualified references to other (meta)data</li>
+</ul>
+<p><strong>Reusable</strong></p>
+<ul>
+<li>R1. meta(data) are richly described with a plurality of accurate
+    and relevant attributes</li>
+<li>R2. (meta)data are released with a clear and accessible data
+    usage license</li>
+<li>R3. (meta)data are associated with detailed provenance</li>
+<li>R4. (meta)data meet domain-relevant community standard</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Open vs. Public vs. FAIR</p>
+<p>FAIR does not demand that data be open: See one definition of "Open":</p>
+<p><a href="http://opendefinition.org/" target="_blank">http://opendefinition.org/</a></p>
+</div>
+<details class="tip">
+<summary>How to be more FAIR with your data?</summary>
+<p>This is a question that only you can answer, that is because it depends
+on (among other things)</p>
+<ol>
+<li>
+<p>Your datatypes and existing standards for what constitutes acceptable data management will vary.</p>
+</li>
+<li>
+<p>The extent to which your scientific community has implemented FAIR: Some disciplines have significant guidelines on FAIR, while others have not addressed the subject in any concerted way.</p>
+</li>
+<li>
+<p>Your level of technical skills: Some approaches to implementing FAIR may require technical skills you may not yet feel comfortable with.</p>
+</li>
+</ol>
+<p>While a lot is up to you, the first step is to evaluate how FAIR you think your data are:</p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Self Assessment</p>
+<p>Thinking about a dataset you work with, complete the ARDC <a href="https://ardc.edu.au/resource/fair-data-self-assessment-tool/" target="_blank">FAIR assessment</a></p>
+<p>What did you learn about yourself and your data?</p>
+</div>
+<h3 id="care-principles">CARE Principles<a class="headerlink" href="#care-principles" title="Permanent link">&para;</a></h3>
+<p>The <a href="https://www.gida-global.org/care" target="_blank">CARE Principles</a> for Indigenous Data Governance were drafted at the International Data Week and Research Data Alliance Plenary co-hosted event "Indigenous Data Sovereignty Principles for the Governance of Indigenous Data Workshop," 8 November 2018, Gaborone, Botswana.</p>
+<p><strong>Collective Benefit</strong></p>
+<ul>
+<li>C1. For inclusive development and innovation</li>
+<li>C2. For improved governance and citizen engagement</li>
+<li>C3. For equitable outcomes</li>
+</ul>
+<p><strong>Authority to Control</strong></p>
+<ul>
+<li>A1. Recognizing rights and interests</li>
+<li>A2. Data for governance</li>
+<li>A3. Governance of data</li>
+</ul>
+<p><strong>Responsibility</strong></p>
+<ul>
+<li>R1. For positive relationships</li>
+<li>R2. For expanding capability and capacity</li>
+<li>R3. For Indigenous languages and worldviews</li>
+</ul>
+<p><strong>Ethics</strong></p>
+<ul>
+<li>E1. For minimizing harm and maximizing benefit</li>
+<li>E2. For justice</li>
+<li>E3. For future use</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Connecting FOSS and CARE: <a href="https://nativesoilnerd.com/">FOSS Alumnus Dr. Lydia Jennings</a>{target=_blank</p>
+<p>Dr. Lydia Jennings was a Data Science Fellow at the University of Arizona who attended FOSS in Fall of 2022.</p>
+<p>Lydia graduated from the University of Arizona's Department of Evironemtal Sciences in 2023 and has published a paper on the application of the CARE principles to ecology and biodiversity research.</p>
+<p><a href="https://www.nature.com/articles/s41559-023-02161-2" target="_blank">Appying the 'CARE Principles for Indigenous Data Governance' to ecology and biodiversity</a> <em>Nature Ecology &amp; Evolution</em>, 2023. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">More Resources for CARE &amp; Indigenous Rights</p>
+<ul>
+<li>
+<p><a href="https://www.nature.com/articles/sdata201618">The FAIR Guiding Principles for scientific data management and stewardship</a></p>
+</li>
+<li>
+<p><a href="https://doi.org/10.1038/sdata.2016.18" target="_blank">Wilkinson et al. (2016)</a> established the guidelines to improve the Findability, Accessibility, Interoperability, and Reuse (FAIR) of digital assets for research. </p>
+</li>
+<li>
+<p><a href="https://www.go-fair.org/fair-principles/" target="_blank">Go-FAIR website</a></p>
+</li>
+<li>
+<p><a href="http://doi.org/10.5334/dsj-2020-043" target="_blank">Carroll et al. (2020)</a> established the CARE Principles for Indigenous Data Governance. <a href="https://static1.squarespace.com/static/5d3799de845604000199cd24/t/5da9f4479ecab221ce848fb2/1571419335217/CARE+Principles_One+Pagers+FINAL_Oct_17_2019.pdf" target="_blank">full document <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 64C0 28.7 28.7 0 64 0h160v128c0 17.7 14.3 32 32 32h128v144H176c-35.3 0-64 28.7-64 64v144H64c-35.3 0-64-28.7-64-64zm384 64H256V0zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56h-16v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V368c0-8.8 7.2-16 16-16m32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24h-16v48zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48h-32c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16m32 128c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16h-16v96zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V368"/></svg></span></a></p>
+</li>
+<li>
+<p><a href="https://indigenousdatalab.org/networks/" target="_blank">Indigenous Data Sovereignty Networks</a></p>
+</li>
+<li>
+<p><a href="https://localcontexts.org" target="_blank">Local Contexts</a></p>
+</li>
+</ul>
+</div>
+<h3 id="trust-principles">TRUST Principles<a class="headerlink" href="#trust-principles" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.nature.com/articles/s41597-020-0486-7" target="_blank">Lin et al. 2020</a> The TRUST Principles for digital repositories</p>
+<p><strong>Transparency</strong></p>
+<ul>
+<li>
+<p>Terms of use, both for the repository and for the data holdings.</p>
+</li>
+<li>
+<p>Minimum digital preservation timeframe for the data holdings.</p>
+</li>
+<li>
+<p>Any pertinent additional features or services, for example the capacity to responsibly steward sensitive data.</p>
+</li>
+</ul>
+<p><strong>Responsibility</strong></p>
+<ul>
+<li>
+<p>Adhering to the designated community’s metadata and curation standards, along with providing stewardship of the data holdings e.g. technical validation, documentation, quality control, authenticity protection, and long-term persistence.</p>
+</li>
+<li>
+<p>Providing data services e.g. portal and machine interfaces, data download or server-side processing.</p>
+</li>
+<li>
+<p>Managing the intellectual property rights of data producers, the protection of sensitive information resources, and the security of the system and its content.</p>
+</li>
+</ul>
+<p><strong>User focus</strong></p>
+<ul>
+<li>
+<p>Implementing relevant data metrics and making these available to users.</p>
+</li>
+<li>
+<p>Providing (or contributing to) community catalogues to facilitate data discovery.</p>
+</li>
+<li>
+<p>Monitoring and identifying evolving community expectations and responding as required to meet these changing needs.</p>
+</li>
+</ul>
+<p><strong>Sustainability</strong></p>
+<ul>
+<li>
+<p>Planning sufficiently for risk mitigation, business continuity, disaster recovery, and succession.</p>
+</li>
+<li>
+<p>Securing funding to enable ongoing usage and to maintain the desirable properties of the data resources that the repository has been entrusted with preserving and disseminating.</p>
+</li>
+<li>
+<p>Providing governance for necessary long-term preservation of data so that data resources remain discoverable, accessible, and usable in the future.</p>
+</li>
+</ul>
+<p><strong>Technology</strong></p>
+<ul>
+<li>
+<p>Implementing relevant and appropriate standards, tools, and technologies for data management and curation.</p>
+</li>
+<li>
+<p>Having plans and mechanisms in place to prevent, detect, and respond to cyber or physical security threats.</p>
+</li>
+</ul>
+<hr />
+<h3 id="references-and-resources_1">References and Resources<a class="headerlink" href="#references-and-resources_1" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.nature.com/articles/sdata201618">https://www.nature.com/articles/sdata201618</a></p>
+<hr />
+<p><br/>
+<br/></p>
+<h2 id="data-management-plans">Data Management Plans<a class="headerlink" href="#data-management-plans" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Learning Objectives</p>
+<ul>
+<li>Describe the purpose of a data management plan</li>
+<li>Describe the important elements of a data management plan</li>
+<li>Use a self-assessment to design a data management plan</li>
+</ul>
+</div>
+<h3 id="what-is-a-dmp">What is a DMP?<a class="headerlink" href="#what-is-a-dmp" title="Permanent link">&para;</a></h3>
+<p>"A data management plan or DMP is a formal document that outlines how
+data are to be handled both during a research project, and after the
+project is completed. [1] The goal of a data management plan is to
+consider the many aspects of data management, metadata generation, data
+preservation, and analysis before the project begins; this may lead to
+data being well-managed in the present, and prepared for preservation in
+the future."(Source: <a href="https://en.wikipedia.org/wiki/Data_management_plan">https://en.wikipedia.org/wiki/Data_management_plan</a>)</p>
+<p><a href="https://dmptool.org/public_plans" target="_blank">Example DMPs</a></p>
+<p>Bishop <a href="https://datascience.codata.org/articles/10.5334/dsj-2023-027" target="_blank">article</a> on DMPs</p>
+<hr />
+<p><strong>Why bother with a DMP?</strong></p>
+<div class="admonition question">
+<p class="admonition-title">How would you answer?</p>
+<p>Do you have a data management plan? If so, how do you use it?</p>
+</div>
+<p><em>"Those who fail to plan, plan to fail"</em></p>
+<p>Returning to the assertion that data (and its value) is at the
+foundation of your science, working without a data management plan
+should be considered scientific misconduct.</p>
+<p>Those are strong words. And while we might have an intuition of the
+boundaries of research ethics - data mismanagement seems more like an
+annoyance than misconduct. However, if your mismanagement leads to error
+in your research data, or the inability to make publicly-funded research
+open to the public, these are serious consequences. Increasingly,
+funders realize this.</p>
+<p><strong>Stick:</strong></p>
+<ul>
+<li><a href="https://www.nsf.gov/pubs/2019/nsf19069/nsf19069.jsp">You have to make one</a></li>
+<li>Reviewers definitely look at them, but they may not be enforced.</li>
+</ul>
+<p><strong>Carrot:</strong></p>
+<ul>
+<li>Make your life easier</li>
+<li>Planning for you project makes it run more smoothly</li>
+<li>Avoid surprise costs</li>
+</ul>
+<p><br/>
+<br/></p>
+<div class="admonition tip">
+<p class="admonition-title">DMP Tools</p>
+<p>Make your life a little easier by creating DMPs with online tools </p>
+<p><a href="https://ds-wizard.org/" target="_blank">Data Stewardship Wizard</a></p>
+<p><a href="https://dmptool.org/" target="_blank">DMPTool</a></p>
+</div>
+<p><br/>
+<br/></p>
+<hr />
+<p><br/>
+<br/></p>
+<h2 id="licenses">Licenses<a class="headerlink" href="#licenses" title="Permanent link">&para;</a></h2>
+<p>By default, when you make creative work, that work is under exclusive copyright. This means that you have the right to decide how your work is used, and that others must ask your permission to use your work.</p>
+<p>If you want your work to be Open and used by others, you need to specify how others can use your work. This is done by <em>licensing</em> your work.</p>
+<p><br>
+<br></p>
+<div class="admonition tip">
+<p class="admonition-title">License Examples</p>
+<p><a href="https://choosealicense.com/licenses/mit/" target="_blank">MIT License</a></p>
+<p><a href="https://choosealicense.com/licenses/gpl-3.0/" target="_blank">GNU General Public License v3.0</a></p>
+<p>FOSS material has been licensed using the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+<p><br>
+<br></p>
+<h4 id="license-options-from-uarizona-library">License Options from UArizona Library<a class="headerlink" href="#license-options-from-uarizona-library" title="Permanent link">&para;</a></h4>
+<figure>
+<p><a href="https://data.library.arizona.edu/supported-platforms/redata" target="blank" rel="open science"><img alt="open science" src="../assets/license_matrix.png" width="600" /> </a>
+    <figcaption> License options for University of <a href="https://data.library.arizona.edu/supported-platforms/redata">Arizona Research Data Repository (ReDATA)</a>  </figcaption></p>
+</figure>
+<p><br></p>
+<h4 id="additional-info">Additional Info<a class="headerlink" href="#additional-info" title="Permanent link">&para;</a></h4>
+<p>General guidance on how to choose a license <a href="https://choosealicense.com/">https://choosealicense.com/</a></p>
+<p>More good guidance on how to choose a license <a href="https://opensource.guide/legal/">https://opensource.guide/legal/</a></p>
+<p>Licensing options for your <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#choosing-the-right-license" target="_blank">Github Repository</a></p>
+<hr />
+<h3 id="references-and-resources_2">References and Resources<a class="headerlink" href="#references-and-resources_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.nsf.gov/bio/biodmp.jsp">NSF Guidelines on DMPs</a></li>
+<li><a href="https://dmptool.org/general_guidance">https://dmptool.org/general_guidance</a></li>
+<li><a href="https://dmptool.org/public_templates">https://dmptool.org/public_templates</a></li>
+<li>Professional and scholarly societies, e.g., theEcological Society of America <a href="http://www.esa.org/esa/science/data-sharing/resources-and-tools/">http://www.esa.org/esa/science/data-sharing/resources-and-tools/</a></li>
+<li>DataOne - <a href="https://dataoneorg.github.io/Education/bestpractices/">https://dataoneorg.github.io/Education/bestpractices/</a></li>
+<li>Data Carpentry - <a href="http://datacarpentry.org/">http://datacarpentry.org/</a></li>
+<li>The US Geological Survey <a href="https://www.usgs.gov/data-management">https://www.usgs.gov/data-management</a></li>
+<li>Repository registry (and search) service: <a href="http://www.re3data.org/">http://www.re3data.org/</a></li>
+<li>Your university library</li>
+</ul>
+<hr />
+<h2 id="self-assessment">Self Assessment<a class="headerlink" href="#self-assessment" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary>What is a Data Management Plan?</summary>
+<p><strong>Important</strong>: A data management plan (DMP) is now required aspect of publicly funded research.</p>
+<p>DMPs are short, formal, documents outlining what types of data will be used, and what will be done with the data both during and after a research project concludes.</p>
+</details>
+<details class="question">
+<summary>True or False: When science project funding ends, the data should end with it</summary>
+<div class="admonition success">
+<p class="admonition-title">False</p>
+<p>Data live on after a project ends.</p>
+<p>Ensuring that data have a full lifecycle where they can be (re)hosted and made available after a project ends is critical to open science and reproducible research</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Maybe</p>
+<p>Sometimes destroying data is part of the life cycle of data - this may be required if data are sensitive and could be used unethically in the future, beyond the control of the original investigator team. </p>
+</div>
+</details>
+<details class="question">
+<summary>True or False: FAIR and CARE data principles are the same</summary>
+<div class="admonition success">
+<p class="admonition-title">False</p>
+<p>The CARE principles were created in order to help guide and answer when and how applying FAIR data principles to soverign indigenous-controlled data should be done and when it should not. </p>
+</div>
+</details>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    2024-09-25
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 The Pennsylvania State University
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ncems/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/c/CyverseOrgProject" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305m-317.51 213.508V175.185l142.739 81.205z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+    
+  </body>
+</html>
