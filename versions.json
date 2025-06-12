@@ -3,5 +3,10 @@
     "version": "latest",
     "title": "latest",
     "aliases": []
+  },
+  {
+    "version": "2024-pre-summit",
+    "title": "2024-pre-summit",
+    "aliases": []
   }
 ]
