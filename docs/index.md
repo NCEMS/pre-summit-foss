@@ -37,6 +37,10 @@ By working through an example project relevant to your interests, you will pract
 
 ---
 
+## Workshop Archives
+Looking for material from a previous workshop? Access archived content here:
+- [2024 Workshop Archive](https://ncems.github.io/pre-summit-foss/2024-pre-summit/)
+
 **Funding and Citations:**
 
 NCEMS is funded by the National Science Foundation under Award Number [![NSF-2335029](https://img.shields.io/badge/NSF-2335029-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2335029) 
