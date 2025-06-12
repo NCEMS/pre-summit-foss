@@ -10,12 +10,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # needed for mike to access all history
+
       - uses: actions/setup-python@v5
         with:
           python-version: 3.9
-      - name: run requirements file
-        run:  pip install -r requirements.txt 
-      - name: Deploy docs
-        run: mkdocs gh-deploy --force
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install requirements
+        run: |
+          pip install -r requirements.txt
+          pip install mike
+
+      - name: Set up git identity
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Deploy "latest" docs with mike
+        run: |
+          mike deploy --update-aliases latest
+          mike set-default latest
+
+      - name: Push gh-pages branch
+        run: git push origin gh-pages
+
