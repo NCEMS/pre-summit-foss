@@ -38,7 +38,9 @@ By working through an example project relevant to your interests, you will pract
 ---
 
 ## Workshop Archives
+
 Looking for material from a previous workshop? Access archived content here:
+
 - [2024 Workshop Archive](https://ncems.github.io/pre-summit-foss/2024-pre-summit/)
 
 **Funding and Citations:**
