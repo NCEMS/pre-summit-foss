@@ -30,7 +30,7 @@ jobs:
       - name: Deploy "latest" docs with mike
         run: |
           mike deploy --update-aliases latest
-          mike set-default latest
+          mike set-default latest --allow-empty
 
       - name: Push gh-pages branch
         run: git push origin gh-pages
