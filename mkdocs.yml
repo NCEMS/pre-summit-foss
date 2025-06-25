@@ -24,8 +24,8 @@ nav:
   - Lessons:
     - '1. Open Science': 01_intro_open_sci.md
     - '2. Data Management': 02_managing_data.md
-    - '3. Project Management': 03_project_management.md
-    - '4. How to Talk to Computers': 04_talk_to_computer.md
+    - '3. How to Talk to Computers': 03_talk_to_computer.md
+    - '4. AI Prompting & Research': 04_prompt_engineering.md
 
 
 # must also set Action to use `@nomaterial` branch instead of `@master` for material
