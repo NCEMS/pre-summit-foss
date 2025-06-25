@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://ncems.github.io/pre-summit-foss/latest/03_talk_to_computer/">
       
       
+        <link rel="prev" href="../02_managing_data/">
+      
+      
+        <link rel="next" href="../04_prompt_engineering/">
       
       
       <link rel="icon" href="../assets/favicon.ico">
@@ -22,7 +26,7 @@
     
     
       
-        <title>How to Talk to Computers - NCEMS Pre-Summit Open Science Training</title>
+        <title>3. How to Talk to Computers - NCEMS Pre-Summit Open Science Training</title>
       
     
     
@@ -114,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Talk to Computers
+              3. How to Talk to Computers
             
           </span>
         </div>
@@ -239,10 +243,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../01_intro_open_sci/" class="md-tabs__link">
           
   
@@ -475,8 +481,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -492,17 +500,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -515,7 +526,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Lessons
@@ -572,20 +583,292 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../03_project_management/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    3. How to Talk to Computers
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    3. Project Management
+    3. How to Talk to Computers
     
   </span>
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-command-line-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Command Line Interface
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-unix-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Unix Shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introductory-shell-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introductory Shell Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introductory Shell Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-with-files-and-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Files and Directories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-carpentries-lessons-on-linux-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      More Carpentries Lessons on Linux Command line
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-chatbots-for-open-science" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Chatbots for Open Science
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LLM Chatbots for Open Science">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commercial-chatbots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commercial Chatbots
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llms-in-150-words-or-less" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLMs in 150 words (or less)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-writing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Writing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt Writing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt-priming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Priming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linked Prompts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-playing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Playing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompting-chatbots-for-foss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompting Chatbots for FOSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompting Chatbots for FOSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provide-a-general-outline-for-a-data-management-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provide a general outline for a data management plan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-a-step-by-step-recipe-to-create-and-serve-an-mkdocs-website-in-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provide a step-by-step recipe to create and serve an mkdocs website in Github
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-shell-commands-and-shell-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write shell commands and shell scripts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-git-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write git commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-download-and-conda-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write download and conda commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-docker-run-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write docker run commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-docker-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write docker files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -598,12 +881,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../04_talk_to_computer.md" class="md-nav__link">
+      <a href="../04_prompt_engineering/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    4. How to Talk to Computers
+    4. AI Prompting & Research
     
   </span>
   
