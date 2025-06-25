@@ -9,7 +9,6 @@ We will be using several services that require you to create a user account.
 | Account | Notes |
 | --- | --- |
 | [:material-github: GitHub](https://github.com){target=_blank} |  GitHub will be used to store lecture materials and your own work. We will use [GitHub Education](https://education.github.com/){target=_blank} and its free features for hands-on.
-| [:material-slack: Slack](https://cyverselearning.slack.com/){target=_blank} | We use the `CyVerse Learning`  Slack organization. You can use Slack in the browser, but the desktop app is usually less buggy. |
 | [:material-language-markdown: HackMD](https://hackmd.io/){target=_blank} | We will use HackMD in order to facilitate daily discussions, questions and general notes. Link your HackMD using your GitHub account
 | [CyVerse](https://user.cyverse.org/signup){target=_blank} | We will introduce you to CyVerse which is a powerful cloud computer with large data storage.
 
