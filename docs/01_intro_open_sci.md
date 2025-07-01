@@ -21,44 +21,65 @@ HackMD: https://hackmd.io/tLnlwjjTSoGG8U2yPHWQJw
 
 <br>
 
-<span style="font-size:1.3em;">_"Open Science is transparent and accessible knowledge that is shared and developed through collaborative networks"_</span>
+Open Science is a broad movement dedicated to making scientific processes and knowledge more transparent, inclusive, and accessible to everyone. The core idea is to open up the entire research lifecycle, from the initial idea to the final publication and beyond, fostering collaboration and accelerating discovery.
 
-[-Vincente-Saez & Martinez-Fuentes 2018](https://doi.org/10.1016/j.jbusres.2017.12.043)
+While the term has been around for a while, its meaning has been formalized and globally recognized through the **[UNESCO Recommendation on Open Science](https://unesdoc.unesco.org/ark:/48223/pf0000379949)**, adopted in 2021. This key document defines Open Science as:
 
-<br>
-<br>
-<br>
-<br>
-<br>
+> "...an inclusive construct that combines various movements and practices aiming to make multilingual scientific knowledge openly available, accessible and reusable for everyone, to increase scientific collaborations and sharing of information for the benefits of science and society, and to open the processes of scientific knowledge creation, evaluation and communication to societal actors beyond the traditional scientific community."
 
-<figure markdown>
-  <a target="blank" rel="open science">![open science](./assets/life_cycle.png){ width="400" } </a>
-    <figcaption> The Research Life Cycle from [Open Science Framework](https://osf.io/)</figcaption>
-</figure>
-<br>
-<br>
-<br>
-<br>
+### Guiding Principles: FAIR, CARE, and TRUST
 
-!!! Quote "Definitions of Open Science"
+Three sets of principles have been developed to guide researchers in practicing open science, particularly concerning data management and stewardship.
 
-    "Open Science is defined as an inclusive construct that combines various movements and practices aiming to make multilingual scientific knowledge openly  available,  accessible  and  reusable  for  everyone,  to  increase  scientific  collaborations  and  sharing of information for the benefits of science and society, and to open the processes of scientific knowledge creation, evaluation and communication to societal actors beyond the traditional scientific community." - [UNESCO Definition](https://www.unesco.org/en/natural-sciences/open-science){target=_blank}
+To ensure that "open" is also effective and ethical, the community has developed important guiding principles:
 
-    - [UNESCO's Recommendation on Open Science](https://unesdoc.unesco.org/ark:/48223/pf0000379949.locale=en){target=_blank}
-    
-    "Open Science is the movement to make scientific research (including publications, data, physical samples, and software) and its dissemination accessible to all levels of society, amateur or professional..." [ :material-wikipedia: Wikipedia definition](https://en.wikipedia.org/wiki/Open_science){target=_blank}
-<br>
+The **[FAIR](https://doi.org/10.1038/sdata.2016.18){target=_blank}** principles are a set of guiding principles to make data **F** indable, **A** ccessible, **I** nteroperable, and **R** eusable.
+
+These principles provide a framework for organizing and documenting data, so that it can be more easily discovered, understood, and reused by others.
+
+*   **FAIR Principles:** Research outputs should be **F** indable, **A** ccessible, **I** nteroperable, and **R** eusable. This is a set of technical guidelines to ensure that data and software can be discovered and used by both humans and machines.
+
+The **[CARE](https://doi.org/10.5334/dsj-2020-043){target=_blank}** principles for Indigenous Data Governance are people and purpose-oriented, reflecting the crucial role of data in advancing Indigenous innovation and self-determination.
+
+They are: **C** ollective benefit, **A** uthority to control, **R** esponsibility, and **E** thics.
+
+These principles complement the FAIR principles, and together they guide the move towards more open and equitable data practices.
+
+The **[TRUST](https://doi.org/10.1038/s41597-020-0486-7){target=_blank}** principles provide a framework for digital repositories to demonstrate their reliability and commitment to data stewardship.
+
+They stand for **T** ransparency, **R** esponsibility, **U** ser focus, **S** ustainability, and **T** echnology.
+
+While FAIR and CARE focus on the data itself, TRUST focuses on the repositories that host the data, ensuring they are reliable and can be trusted to preserve data for the long term.
+
+
+As you can see, Open Science is a rich and evolving ecosystem. In this lesson, we will focus on three foundational components that are a great starting point for any researcher: **Open Access**, **Open Data**, and **Open Source Software**.
 
 ## Foundational Open Science Skills
 
-The original CyVerse FOSS workshop is designed to:
+??? Question "What does FOSS mean?"
 
-<span style="font-size:1.2em;">_1. Building a culture of scientists eager to share research materials - such as data, code, methods, documentation, and early results - with colleagues and society at large, in addition to traditional publications_</span> 
+    :material-open-source-initiative: Free and Open Source Software (FOSS) is the prime acronym. 
+
+    We chose FOSS for the name of our workshop series as a homage to the open source ecosystem that modern scientific research rests upon. 
+
+This lesson is adapted from the curriculum of the **[CyVerse Foundational Open Science Skills (FOSS)](https://foss.cyverse.org){target=_blank}** workshop. FOSS is a comprehensive, hands-on training program designed to equip researchers with the practical skills needed to work effectively in a modern, collaborative, and data-intensive environment.
+
+The main FOSS curriculum goes beyond theory to provide practical experience with core tools and best practices, including:
+
+*   **The Command Line:** For automating tasks and managing computational resources.
+*   **Data Management & Tidy Data:** Structuring data for analysis and preservation.
+*   **Version Control with Git/GitHub:** Tracking changes and collaborating on code and documents.
+*   **Containerization with Docker:** Ensuring computational reproducibility across different systems.
+*   **Prompt Engineering:** Leveraging the ever expanding ecosystem of generative AI tools for scientific research.
+
+In this abbreviated short-course for NCEMS we will focus on: 
+
+<span style="font-size:1.2em;">_1. Building a culture of team scientists eager to share research materials - such as data, code, methods, documentation, and early results - with colleagues and society at large, in addition to more traditional peer-reviewed publications_</span> 
 
 <br>
 <br>
 
-<span style="font-size:1.2em;">_2. Mastery of digital tools to create reproducible science that others can build upon_</span>
+<span style="font-size:1.2em;">_2. Introduction to CyVerse and ACCESS-CI cyberinfrastructure tools to conducting reproducible science that others can build upon_</span>
 
 <br>
 <br>
@@ -94,20 +115,43 @@ The original CyVerse FOSS workshop is designed to:
 <br>
 <br>
 
-## 2023: the Year of Open Science
+??? Tip "2023: The Year of Open Science"
 
-The White House, joined by 10 federal agencies, and a coalition of more than 85 universities, declared 2023 the Year of Open Science as a way to bring awareness to the benefits of Open Science and to steer the scientitic community towards its adoption. 
+    Building on the policy momentum of the reproducibility crisis, 2023 was declared the "Year of Open Science" by the White House Office of Science and Technology Policy (OSTP). The initiative focused on sparking culture change and building awareness through a series of events, resources, and community activities designed to support the adoption of open, equitable, and secure science practices across the federal government and the nation.
 
-NASA leads a prominent program called [Transform to Open Science](https://github.com/nasa/Transform-to-Open-Science) which includes an [online class on Open Science](https://nasa.github.io/Transform-to-Open-Science/take-os101/). 
+    The White House OSTP joined by 10 federal agencies and a coalition of more than 85 universities, declared 2023 the Year of Open Science as a way to bring awareness to the benefits of Open Science and to steer the scientitic community towards its adoption. 
 
-<figure markdown>
-  <a href="https://github.com/nasa/Transform-to-Open-Science" target="blank" rel="open science">![open science](https://zenodo.org/record/7262104/files/Tops_Badge_Nasa.png){ width="200" } </a>
-    <figcaption> NASA Transform to Open Science (TOPS) </figcaption>
-</figure>
+    NASA leds a prominent program called [Transform to Open Science](https://github.com/nasa/Transform-to-Open-Science) which included an [online class on Open Science](https://nasa.github.io/Transform-to-Open-Science/take-os101/). 
+
+    <figure markdown>
+    <a href="https://github.com/nasa/Transform-to-Open-Science" target="blank" rel="open science">![open science](https://zenodo.org/record/7262104/files/Tops_Badge_Nasa.png){ width="200" } </a>
+        <figcaption> NASA Transform to Open Science (TOPS) </figcaption>
+    </figure>
 
 <br>
 <br>
 <br>
+
+??? Tip "2025: Gold Standard Science"
+
+    After the re-election of Donald Trump in late 2024, the White House deprecated or ended nearly all of the scientific policies of the previous administration. This includes the 2023 "Open Science" mandates. 
+
+    [Memorandums](https://www.whitehouse.gov/wp-content/uploads/2025/03/OSTP-Guidance-for-GSS-June-2025.pdf){target=_blank} by OSTP director Michael Krastios and executive orders on ["Gold Standard Science"](https://www.whitehouse.gov/presidential-actions/2025/05/restoring-gold-standard-science/){target=_blank} retain language on the principles of Open Science, though [critics argue](https://www.science.org/content/article/what-does-trump-s-call-gold-standard-science-really-mean){target=_blank} political interference and scientific gate keeping may hinder what types of science is allowed to be funded under the current administration.  
+
+    !!! Quote "2025 Executive Orders"
+
+        * [REMOVING BARRIERS TO AMERICAN LEADERSHIP IN ARTIFICIAL INTELLIGENCE, January 23, 2025](https://www.whitehouse.gov/presidential-actions/2025/01/removing-barriers-to-american-leadership-in-artificial-intelligence/){target=_blank}
+
+        * [OMB Accelerating Federal Use of AI through Innovation, Governance, and Public Trust, April 3, 2025](https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf){target=_blank}
+
+            * [Fact Sheet: Eliminating Barriers for Federal Artificial Intelligence Use and Procurement, April 7, 2025](https://www.whitehouse.gov/fact-sheets/2025/04/fact-sheet-eliminating-barriers-for-federal-artificial-intelligence-use-and-procurement/){target=_blank}
+
+        * [ADVANCING ARTIFICIAL INTELLIGENCE EDUCATION FOR AMERICAN YOUTH, April 23, 2025](https://www.whitehouse.gov/presidential-actions/2025/04/advancing-artificial-intelligence-education-for-american-youth/){target=_blank}
+
+        * [Restoring Gold Standard Science, May 23, 2025](https://www.whitehouse.gov/presidential-actions/2025/05/restoring-gold-standard-science/){target=_blank}
+
+            * [Fact Sheet: President Donald J. Trump is Restoring Gold Standard Science in America](https://www.whitehouse.gov/fact-sheets/2025/05/fact-sheet-president-donald-j-trump-deploys-advanced-nuclear-reactor-technologies-for-national-security/){target=_blank}
+
 
 ---
 
@@ -116,7 +160,17 @@ NASA leads a prominent program called [Transform to Open Science](https://github
 <br>
 
 
-## **:material-pillar: 6 Pillars of Open Science**
+## The Pillars of Open Science
+
+The UNESCO framework organizes Open Science around four key pillars:
+
+1.  **Open Scientific Knowledge:** This includes not just final publications (Open Access), but also the underlying data (Open Data), software source code and models (Open Source Software and Models), and even educational materials (Open Educational Resources).
+2.  **Open Science Infrastructures:** The physical and digital tools that make Open Science possible, such as open hardware, open-source software platforms, and shared repositories for data and publications.
+3.  **Open Engagement of Societal Actors:** Actively involving the public in research through practices like citizen science and crowdfunding, ensuring science addresses societal needs.
+4.  **Open Dialogue with Other Knowledge Systems:** Recognizing and respecting the contributions of diverse knowledge systems, such as Indigenous knowledge, to create a more holistic understanding of the world.
+
+
+### **:material-pillar: The [6] Pillars of Open Science**
 
 [**:material-pillar: Open Access Publications**](#open-access-publications)
 
@@ -132,7 +186,9 @@ NASA leads a prominent program called [Transform to Open Science](https://github
 
 ??? Question "Wait, how many pillars :material-pillar: of Open Science Are There Really?"
 
-    The number can be from [4 :material-pillar:](https://narratives.insidehighered.com/four-pillars-of-open-science/){target=_blank} to [8 :material-pillar:](https://www.ucl.ac.uk/library/research-support/open-science/8-pillars-open-science){target=_blank}
+    !!! Answer "It Depends"
+    
+        The number of pillars range from [4 :material-pillar:](https://narratives.insidehighered.com/four-pillars-of-open-science/){target=_blank} to 6, up to [8 :material-pillar:](https://www.ucl.ac.uk/library/research-support/open-science/8-pillars-open-science){target=_blank} depending on where you're reading.
 
 <br>
 <br>
@@ -864,6 +920,60 @@ Government, universities, and granting agencies have embraced Open Science and [
 
 ## Self Assessment
 
+Test your knowledge with the following questions.
+
+??? Question "Which of the following best describes the core principles of Open Science?"
+
+    *   a) Secrecy, Competition, and Profit
+    *   b) Transparency, Collaboration, and Accessibility
+    *   c) Exclusivity, Individualism, and Paywalls
+    *   d) Obscurity, Isolation, and Copyright
+
+    ??? Success "Answer"
+
+        The correct answer is **b) Transparency, Collaboration, and Accessibility**. Open Science is a movement to make scientific research, data, and dissemination accessible to all levels of society.
+
+??? Question "True or False: Open Access publishing means that research outputs are available online to anyone at no cost and are free of most copyright and licensing restrictions."
+
+    ??? Success "Answer"
+
+        **True**. Open Access (OA) literature is digital, online, free of charge, and free of most copyright and licensing restrictions. It allows for the reuse and redistribution of research findings, accelerating discovery.
+
+??? Question "The FAIR principles are a set of guiding principles to make data more reusable. What does FAIR stand for?"
+
+    *   a) Fast, Accessible, Intelligent, and Reproducible
+    *   b) Findable, Accessible, Interoperable, and Reusable
+    *   c) Frequent, Available, Indexed, and Robust
+    *   d) Formal, Actionable, Interconnected, and Relevant
+
+    ??? Success "Answer"
+
+        The correct answer is **b) Findable, Accessible, Interoperable, and Reusable**. These principles provide a framework for improving the quality and reusability of research data.
+
+??? Question "True or False: Sharing research data is not considered a part of Open Science practices."
+
+    ??? Success "Answer"
+
+        **False**. Open Data is a cornerstone of Open Science. Sharing research data allows for verification of results, encourages new research questions, and avoids duplication of effort.
+
+??? Question "Which of the following is a key benefit of practicing Open Science?"
+
+    *   a) It slows down the pace of scientific discovery.
+    *   b) It increases the risk of research being stolen before publication.
+    *   c) It enhances the transparency and reproducibility of research.
+    *   d) It makes it harder for the public to engage with science.
+
+    ??? Success "Answer"
+
+        The correct answer is **c) It enhances the transparency and reproducibility of research**. By making methods, data, and code openly available, other researchers can more easily verify and build upon previous work, which is fundamental to the scientific process.
+
+??? Question "True or False: A Data Management Plan (DMP) is only important after a research project is completed."
+
+    ??? Success "Answer"
+
+        **False**. A Data Management Plan (DMP) is a formal document that should be created *before or at the start* of a research project. It outlines how data will be handled both during research and after the project is completed, ensuring data quality and preservation.
+
+
 ??? Question "True or False: All research papers published in the top journals, like Science and Nature, are always Open Access?"
 
     ??? Success "Answer"
@@ -879,7 +989,7 @@ Government, universities, and granting agencies have embraced Open Science and [
 
 ??? Question "True or False: an article states all of the research data used in the experiments "are available upon request from the corresponding author(s)," meaning the data are "Open""
 
-    ??? Success "Answer"
+    ??? Failure "Answer"
 
         False
 
