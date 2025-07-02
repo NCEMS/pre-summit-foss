@@ -11,11 +11,6 @@
     - Understand the advantages and the challenges to Open Science
 
 <br>
-<br>
-
-Instant Feedback: 
-
-HackMD: https://hackmd.io/tLnlwjjTSoGG8U2yPHWQJw 
 
 ## What is Open Science?
 
