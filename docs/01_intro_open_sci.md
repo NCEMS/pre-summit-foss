@@ -18,7 +18,7 @@
 
 Open Science is a broad movement dedicated to making scientific processes and knowledge more transparent, inclusive, and accessible to everyone. The core idea is to open up the entire research lifecycle, from the initial idea to the final publication and beyond, fostering collaboration and accelerating discovery.
 
-While the term has been around for a while, its meaning has been formalized and globally recognized through the **[UNESCO Recommendation on Open Science](https://unesdoc.unesco.org/ark:/48223/pf0000379949)**, adopted in 2021. This key document defines Open Science as:
+While the term has been around for a while, its meaning has been formalized and globally recognized through the **[UNESCO Recommendation on Open Science](https://unesdoc.unesco.org/ark:/48223/pf0000379949){target=_blank}**, adopted in 2021. This key document defines Open Science as:
 
 > "...an inclusive construct that combines various movements and practices aiming to make multilingual scientific knowledge openly available, accessible and reusable for everyone, to increase scientific collaborations and sharing of information for the benefits of science and society, and to open the processes of scientific knowledge creation, evaluation and communication to societal actors beyond the traditional scientific community."
 
@@ -89,7 +89,7 @@ In this abbreviated short-course for NCEMS we will focus on:
 
 <figure markdown="span">
   <a href="" target="blank" rel="open science">![open science](./assets/open_science_word_cloud.png){ width="500" } </a>
-    <figcaption> Open Science Word Cloud by [Pownall et al. 2023](http://dx.doi.org/10.31234/osf.io/vypkb)</figcaption>
+    <figcaption> Open Science Word Cloud by [Pownall et al. 2023](http://dx.doi.org/10.31234/osf.io/vypkb){target=_blank}</figcaption>
 </figure>
 
 <br>
@@ -116,10 +116,10 @@ In this abbreviated short-course for NCEMS we will focus on:
 
     The White House OSTP joined by 10 federal agencies and a coalition of more than 85 universities, declared 2023 the Year of Open Science as a way to bring awareness to the benefits of Open Science and to steer the scientitic community towards its adoption. 
 
-    NASA leds a prominent program called [Transform to Open Science](https://github.com/nasa/Transform-to-Open-Science) which included an [online class on Open Science](https://nasa.github.io/Transform-to-Open-Science/take-os101/). 
+    NASA leds a prominent program called [Transform to Open Science](https://science.nasa.gov/open-science/){target=_blank} which included an [online class on Open Science](https://science.nasa.gov/open-science/os101/){target=_blank}. 
 
     <figure markdown>
-    <a href="https://github.com/nasa/Transform-to-Open-Science" target="blank" rel="open science">![open science](https://zenodo.org/record/7262104/files/Tops_Badge_Nasa.png){ width="200" } </a>
+    <a href="https://science.nasa.gov/open-science/" target="blank" rel="open science">![open science](https://zenodo.org/record/7262104/files/Tops_Badge_Nasa.png){ width="200" } </a>
         <figcaption> NASA Transform to Open Science (TOPS) </figcaption>
     </figure>
 
@@ -146,6 +146,8 @@ In this abbreviated short-course for NCEMS we will focus on:
         * [Restoring Gold Standard Science, May 23, 2025](https://www.whitehouse.gov/presidential-actions/2025/05/restoring-gold-standard-science/){target=_blank}
 
             * [Fact Sheet: President Donald J. Trump is Restoring Gold Standard Science in America](https://www.whitehouse.gov/fact-sheets/2025/05/fact-sheet-president-donald-j-trump-deploys-advanced-nuclear-reactor-technologies-for-national-security/){target=_blank}
+            
+            * [Krastios June 23, 2025 Memorandum](https://www.whitehouse.gov/wp-content/uploads/2025/03/OSTP-Guidance-for-GSS-June-2025.pdf){target=_blank}
 
 
 ---
@@ -269,7 +271,7 @@ The UNESCO framework organizes Open Science around four key pillars:
             - [PsyrXiv](https://psyarxiv.com/){target=_blank} - is an open access preprint repository for Psychological sciences.
             - [SocArXiv](https://socopen.org/){target=_blank} - is an open access preprint repository for Social sciences.
             - [SportrXiv](https://sportrxiv.org/){target=_blank} - is an open access preprint for Sports sciences.
-            - [ThesisCommons](https://thesiscommons.org/) - open Theses
+            - [ThesisCommons](https://thesiscommons.org/){target=_blank}  - open Theses
 
 
 2. Author's accepted manuscript (AAM) - includes changes that came about during peer-review process. It is a non-typeset or formatted article. This often had an embargo period of 12-24 months
@@ -283,28 +285,34 @@ The UNESCO framework organizes Open Science around four key pillars:
 
     Upon completion of a peer-reviewed science paper, the author typically 1. signs over the copyright of the paper to the publisher or 2. signs an exclusive license agreement with the publisher
 
-    For example authors that publish in [_Science_](https://www.science.org/content/page/science-journals-editorial-policies#copyright-license-to-publish) retain their copyright but sign a 'license to pubish' agreement with AAAS
+    For example authors that publish in [_Science_](https://www.science.org/content/page/science-journals-editorial-policies#copyright-license-to-publish){target=_blank}  retain their copyright but sign a 'license to pubish' agreement with AAAS
 
     Elsevier requires authors to sign over copyright of the article but authors retains some rights of distribution
 
-    - [Elsevier summary of copyright policies](https://www.elsevier.com/about/policies-and-standards/copyright#1-author-rights)
-    - [Elsevier article sharing policy](https://www.elsevier.com/about/policies-and-standards/sharing)
-    - [Wiley policy on self-archiving](https://authorservices.wiley.com/author-resources/Journal-Authors/licensing/self-archiving.html)
-    - [Springer Nature copyright policies](https://www.springer.com/gp/open-access/publication-policies/copyright-transfer#:~:text=Springer%20Nature%20authors%20retain%20copyright,found%20in%20our%20publishing%20policies.)
+    - [Elsevier summary of copyright policies](https://www.elsevier.com/about/policies-and-standards/copyright#1-author-rights){target=_blank} 
+    - [Elsevier article sharing policy](https://www.elsevier.com/about/policies-and-standards/sharing){target=_blank} 
+    - [Wiley policy on self-archiving](https://authorservices.wiley.com/author-resources/Journal-Authors/licensing/self-archiving.html){target=_blank} 
+    - [Springer Nature copyright policies](https://www.springer.com/gp/open-access/publication-policies/copyright-transfer#:~:text=Springer%20Nature%20authors%20retain%20copyright,found%20in%20our%20publishing%20policies.){target=_blank} 
 
 <br>
 <br>
 
-### New Open Access Mandates in US
+### Open Access Mandates in US
 
-The White House Office of Science and Technology (OSTP) has recently released a policy document known as the [Nelson Memo](https://www.whitehouse.gov/ostp/news-updates/2022/08/25/ostp-issues-guidance-to-make-federally-funded-research-freely-available-without-delay/) stating that tax-payer funded research must by open access by 2026 with no embargo period. 
+In 2022, OSTP released a policy document known as the [Nelson Memo](https://www.whitehouse.gov/ostp/news-updates/2022/08/25/ostp-issues-guidance-to-make-federally-funded-research-freely-available-without-delay/){target=_blank}  stating that tax-payer funded research must by open access by 2026 with no embargo period. The [Krastios June 2025 Memorandum](https://www.whitehouse.gov/wp-content/uploads/2025/03/OSTP-Guidance-for-GSS-June-2025.pdf){target=_blank} contains similar language.
+
+??? Tip "Publishing Negative Results"
+
+    The Krastios memo states:
+
+    >  "Accepting of Negative Results as Positive Outcomes Accepting negative results as positive outcomes in science refers to recognizing and valuing—as meaningful contributions to knowledge generation—null or unexpected findings that fail to support a hypothesis. This approach is essential for advancing pioneering science, as it counters publication bias, encourages comprehensive reporting, and provides valuable insights into ineffective approaches, thereby guiding future research directions and avoiding redundant efforts. Embracing negative results requires researchers to transparently document and share null findings using accepted 5 methodologies, clear reporting formats, and accessible platforms, such as open-access journals or data repositories. Agencies shall recognize negative or null results as valuable contributions to scientific knowledge, fostering integrity and innovation. This recognition includes expectations that funded research projects transparently report all outcomes, including null or negative results, in publications and publicly accessible data repositories, accompanied by clear, detailed documentation of methods, analyses, and limitations. Agencies should promote standards that encourage the submission and dissemination of negative findings, such as establishing dedicated journal sections or specialized repositories for null results, integrating these outcomes into broader research narratives."    
 
 Authors can comply with the memo by either:
 
 1. Publishing Open Access (this usually requires higher fees)
 2. Distributing the Author's Accepted Manuscript (AAM) 
 
-Read [USDA's open access plan](https://www.nal.usda.gov/sites/default/files/page-files/USDA_Public_Access_Implementation_Plan_8_10_2023_0.pdf) in reponse to the Nelson Memo
+Read [USDA's open access plan](https://www.nal.usda.gov/sites/default/files/page-files/USDA_Public_Access_Implementation_Plan_8_10_2023_0.pdf){target=_blank} in reponse to the Nelson Memo
 
 <br>
 <br>
@@ -313,7 +321,7 @@ Read [USDA's open access plan](https://www.nal.usda.gov/sites/default/files/page
 
 ### Additional Info
 
-University of Arizona Libraries information on [Open Access publishing](https://lib.arizona.edu/research/open-access) including agreements with several journals to reduce or waive publishing fees. 
+University of Arizona Libraries information on [Open Access publishing](https://lib.arizona.edu/research/open-access){target=_blank} including agreements with several journals to reduce or waive publishing fees. 
 
 https://www.coalition-s.org/
 
@@ -358,7 +366,7 @@ https://www.coalition-s.org/
 
 ### FAIR Principles
 
-In 2016, the [FAIR Guiding Principles](https://www.nature.com/articles/sdata201618) for scientific data management and stewardship were published in _Scientific Data_. 
+In 2016, the [FAIR Guiding Principles](https://www.nature.com/articles/sdata201618){target=_blank} for scientific data management and stewardship were published in _Scientific Data_. 
 
 _**Findable:**_
 Making data discoverable by the wider academic community and the public
@@ -385,7 +393,7 @@ Enabling the repurposing of researach outputs to maximize their research potenti
     - Your research is more visible and has greater impact. Publications which allow access to the underlying data get more citations. Greater visibility also allows for better validation and scrutiny of findings.
     - Other researchers can cite your data, which will drive up your citation number and increase your influence in your field of research.
     - Storing your data in a public repository also provides you with secure and ongoing storage that may otherwise not be available to you.
-    -[Foster Open Science](https://www.fosteropenscience.eu/)
+    -[Foster Open Science](https://www.fosteropenscience.eu/){target=_blank}
 
 
 <br>
@@ -405,7 +413,7 @@ There are many circumstances where open data could be harmful:
 
     ??? Tip "CARE Principles"
 
-        The [CARE Principles](https://www.gida-global.org/care) for Indigenous Data Governance were drafted at the International Data Week and Research Data Alliance Plenary co-hosted event "Indigenous Data Sovereignty Principles for the Governance of Indigenous Data Workshop," 8 November 2018, Gaborone, Botswana.
+        The [CARE Principles](https://www.gida-global.org/care){target=_blank} for Indigenous Data Governance were drafted at the International Data Week and Research Data Alliance Plenary co-hosted event "Indigenous Data Sovereignty Principles for the Governance of Indigenous Data Workshop," 8 November 2018, Gaborone, Botswana.
 
          *Collective Benefit*
 
@@ -431,7 +439,7 @@ There are many circumstances where open data could be harmful:
          -   E2. For justice
          -   E3. For future use
 
-* Data for making [lethal weapons](https://www.theverge.com/2022/3/17/22983197/ai-new-possible-chemical-weapons-generative-models-vx)
+* Data for making [lethal weapons](https://www.theverge.com/2022/3/17/22983197/ai-new-possible-chemical-weapons-generative-models-vx){target=_blank}
 
     ??? tip "TRUST Principles"
 
@@ -511,7 +519,7 @@ There are many circumstances where open data could be harmful:
 ## **:material-pillar: Open Educational Resources**
 
 <figure markdown = "span">
-    [![open educational resources](https://upload.wikimedia.org/wikipedia/commons/2/20/Global_Open_Educational_Resources_Logo.svg){width=240}](https://www.unesco.org/en/communication-information/open-solutions/open-educational-resources)
+    [![open educational resources](https://upload.wikimedia.org/wikipedia/commons/2/20/Global_Open_Educational_Resources_Logo.svg){width=240}](https://www.unesco.org/en/communication-information/open-solutions/open-educational-resources){target=_blank}
 </figure>
 
 !!! Quote "Definitions"
@@ -569,11 +577,12 @@ There are many circumstances where open data could be harmful:
 
 Scientists around the globe are creating computer code for scientific analysis. These are valuable contributions that need to be shared!
 
-Platforms like [GitHub](https://github.com/search?q=open+science){target=_blank} and [GitLab](https://gitlab.com/explore/projects/topics/Open%20Science){target=_blank} are ideal for collaboratively developing code and sharing with the open internet. 
+Platforms like [GitHub](https://github.com/search?q=open+science){target=_blank} and [GitLab](https://gitlab.com/explore/projects/topics/Open%20Science){target=_blank} are ideal for collaboratively developing code and sharing with the open internet. [:hugging: HuggingFace](https://huggingface.co/){target=_blank} has recently emerged as the repository for AI/ML models, code, and training data.
 
 <figure style="display: flex; justify-content: center;">
-    <a href="https://github.com/"><img src="https://cdn.iconscout.com/icon/free/png-256/free-github-169-1174970.png" alt="github" style="width: 200px; margin-right: 30px;"></a>
-    <a href="https://gitlab.com/"><img src="https://raw.githubusercontent.com/CyVerse-learning-materials/foss/mkdocs/docs/assets/gitlab_logo.png" alt="gitlab" style="width: 200px;"></a>
+    <a target="blank" href="https://github.com/"><img src="https://cdn.iconscout.com/icon/free/png-256/free-github-169-1174970.png" alt="github" style="width: 200px; margin-right: 30px;"></a>
+    <a target="blank" href="https://gitlab.com/"><img src="https://raw.githubusercontent.com/CyVerse-learning-materials/foss/mkdocs/docs/assets/gitlab_logo.png" alt="gitlab" style="width: 200px;"></a>
+    <a target="blank" href="https://huggingface.co/" ><img src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.png" alt="huggingface" style="width: 200px; margin-right: 30px;"></a>
 </figure>
 
 <br>
@@ -583,7 +592,7 @@ Platforms like [GitHub](https://github.com/search?q=open+science){target=_blank}
 
 ### Publishing Your Methods or Protocols 
 
-??? Example "Platforms for Publishing Protocols & Bench Techniques"
+!!! Example "Platforms for Publishing Open Protocols & Bench Techniques"
 
     - [BioProtocol](https://bio-protocol.org/Default.aspx){target=_blank}
     - [Current Protocols](https://currentprotocols.onlinelibrary.wiley.com/){target=_blank}
@@ -594,7 +603,7 @@ Platforms like [GitHub](https://github.com/search?q=open+science){target=_blank}
     - [Protocol Exchange](https://protocolexchange.researchsquare.com/){target=_blank}
     - [Protocols Online](http://www.protocol-online.org/prot/){target=_blank}
     - [:material-microscope: Protocols](https://www.protocols.io/){target=_blank}
-    - [SciGene](http://scigine.com/blog/){target=_blank}
+    - [SciGene](https://www.scigene.com/){target=_blank}
     - [Springer Nature Experiments](https://experiments.springernature.com/){target=_blank}
       
 
@@ -626,7 +635,7 @@ It also helps us avoid practices like [p-hacking](https://en.wikipedia.org/wiki/
 
 Read this publication by [Nosek et al. 2018](https://www.pnas.org/doi/10.1073/pnas.1708274114){target=_blank}
 
-Open Science Framework Preregistration https://www.cos.io/initiatives/prereg
+[Open Science Framework Preregistration](https://www.cos.io/initiatives/prereg){target=_blank}
 
 <br>
 <br>
@@ -649,11 +658,11 @@ Open Science Framework Preregistration https://www.cos.io/initiatives/prereg
 
     Open peer review is an umbrella term for a number of overlapping ways that peer review models can be adapted in line with the aims of Open Science, including making reviewer and author identities open, publishing review reports and enabling greater participation in the peer review process.  
     
-    [-Ross-Hellauer et al. (2017)](https://doi.org/10.12688%2Ff1000research.11369.2)
+    [-Ross-Hellauer et al. (2017)](https://doi.org/10.12688%2Ff1000research.11369.2){target=_blank}
 
     <br>
 
-    [:material-wikipedia: Wikipedia's definition](https://en.wikipedia.org/wiki/Open_peer_review)
+    [:material-wikipedia: Wikipedia's definition](https://en.wikipedia.org/wiki/Open_peer_review){target=_blank}
 
 <br>
 <br>
@@ -682,7 +691,7 @@ Open Science Framework Preregistration https://www.cos.io/initiatives/prereg
 - Social and Publication Biases
 - Lack of Incentives
 
-[_Ross-Hallauer 2017_](https://f1000research.com/articles/6-588/v2)
+[_Ross-Hallauer 2017_](https://f1000research.com/articles/6-588/v2){target=_blank}
 
 <br>
 <br>
@@ -694,7 +703,7 @@ Open Science Framework Preregistration https://www.cos.io/initiatives/prereg
 
 <figure markdown>
   <a target="blank" rel="open science">![open science](./assets/plos_peer_review.png){ width="500" } </a>
-    <figcaption> Open Peer Review Options at [PLOS](https://plos.org/resource/open-peer-review/)</figcaption>
+    <figcaption> Open Peer Review Options at [PLOS](https://plos.org/resource/open-peer-review/){target=_blank}</figcaption>
 </figure>
 
 <br>
@@ -702,7 +711,7 @@ Open Science Framework Preregistration https://www.cos.io/initiatives/prereg
 <br>
 
 
-[Defenders of the Traditional Peer-Review System](https://doi.org/10.1038/6295)
+[Defenders of the Traditional Peer-Review System](https://doi.org/10.1038/6295){target=_blank}
 
 <br>
 <br>
@@ -711,7 +720,7 @@ Open Science Framework Preregistration https://www.cos.io/initiatives/prereg
 !!! Tips "Example Open Peer-Review Systems"
 
     [F1000Research](https://f1000research.com/about){target=_blank} An open research publishing platform that offers open peer review and rapid publication.
-    The article from [Ross-Hellauer et al. (2017)](https://doi.org/10.12688%2Ff1000research.11369.2) has open peer-reviews.
+    The article from [Ross-Hellauer et al. (2017)](https://doi.org/10.12688%2Ff1000research.11369.2){target=_blank} has open peer-reviews.
 
 <br>
 
@@ -861,11 +870,11 @@ Government, universities, and granting agencies have embraced Open Science and [
 ## Recommended Open Science Communities
 
 <figure style="display: flex; justify-content: center;">
-    <a href="https://the-turing-way.netlify.app/welcome.html"><img src="https://the-turing-way-personas.netlify.app/_static/logo.jpg" alt="turingway" style="width: 120px; margin-right: 15px;"></a>
-    <a href="https://github.com/nasa/Transform-to-Open-Science"><img src="https://zenodo.org/record/7262104/files/Tops_Badge_Nasa.png" alt="nasatops" style="width: 120px; margin-right: 15px;"></a>
-    <a href="https://openscience.eu/foster-open-science"><img src="https://pbs.twimg.com/profile_images/464812585712234496/tI9cRV8S_400x400.png" alt="foster" style="width: 120px; margin-right: 15px;"></a>
-    <a href="https://carpentries.org/"><img src="https://datascience.wisc.edu/wp-content/uploads/sites/1430/2021/06/TheCarpentries-260x300.jpg" alt="carpentries" style="width: 120px; margin-right: 15px;"></a>
-    <a href="https://www.cos.io/"><img src="https://imagecdn.mightycause.com/2e70620b-783f-4389-93f2-79b2e9b81a22/" alt="cos" style="width: 120px;"></a>
+    <a target="blank" href="https://book.the-turing-way.org/"><img src="https://book.the-turing-way.org/build/logo-detail-with-tex-b3a785daeda7cd0cd8aced986fc257ae.svg" alt="turingway" style="width: 120px; margin-right: 15px;"></a>
+    <a target="blank" href="https://github.com/nasa/Transform-to-Open-Science"><img src="https://zenodo.org/record/7262104/files/Tops_Badge_Nasa.png" alt="nasatops" style="width: 120px; margin-right: 15px;"></a>
+    <a target="blank" href="https://openscience.eu/foster-open-science"><img src="https://pbs.twimg.com/profile_images/464812585712234496/tI9cRV8S_400x400.png" alt="foster" style="width: 120px; margin-right: 15px;"></a>
+    <a target="blank" href="https://carpentries.org/"><img src="https://datascience.wisc.edu/wp-content/uploads/sites/1430/2021/06/TheCarpentries-260x300.jpg" alt="carpentries" style="width: 120px; margin-right: 15px;"></a>
+    <a target="blank" href="https://www.cos.io/"><img src="https://imagecdn.mightycause.com/2e70620b-783f-4389-93f2-79b2e9b81a22/" alt="cos" style="width: 120px;"></a>
 </figure>
 
 [:material-school: Open Scholarship Grassroots Community Networks](https://docs.google.com/spreadsheets/d/1LNF5_bOkRV-RLIF4HYmu-gOemIa4IdfXEer89fM-Vy8/edit#gid=847887324){target=_blank}
@@ -900,8 +909,8 @@ Government, universities, and granting agencies have embraced Open Science and [
 
 ??? Info ":fontawesome-solid-earth-oceania: Oceania Open Science Networks"
 
-    - [New Zealand Open Research Network](https://nzorn.netlify.app/) - New Zealand Open Research Network (NZORN) is a collection of researchers and research-associated workers in New Zealand.
-    - [Australia & New Zealand Open Research Network](https://www.anzopenresearch.org/) - ANZORN is a network of local networks distributed without Australia and New Zealand.
+    - [New Zealand Open Research Network](https://nzorn.netlify.app/){target=_blank} - New Zealand Open Research Network (NZORN) is a collection of researchers and research-associated workers in New Zealand.
+    - [Australia & New Zealand Open Research Network](https://www.anzopenresearch.org/){target=_blank} - ANZORN is a network of local networks distributed without Australia and New Zealand.
 
 <br>
 <br>
@@ -968,7 +977,6 @@ Test your knowledge with the following questions.
 
         **False**. A Data Management Plan (DMP) is a formal document that should be created *before or at the start* of a research project. It outlines how data will be handled both during research and after the project is completed, ensuring data quality and preservation.
 
-
 ??? Question "True or False: All research papers published in the top journals, like Science and Nature, are always Open Access?"
 
     ??? Success "Answer"
@@ -991,7 +999,6 @@ Test your knowledge with the following questions.
         In order for research to be open, the data need to be freely available from a digital repository, like [Data Dryad](https://datadryad.org){target=_blank}, [Zenodo.org](https://zenodo.org){target=_blank}, or [CyVerse](https://cyverse.org/data-commons){target=_blank}.
 
         Data that are 'available upon request' do not meet the FAIR data principles. 
-
 
 
 ??? Question "Using a version control system to host the analysis code and computational notebooks, and including these in your Methods section or Supplementary Materials, is an example of an Open Methodology?"
@@ -1024,5 +1031,3 @@ Test your knowledge with the following questions.
         Always make certain there is a [LICENSE](https://choosealicense.com/licenses/){target=_blank} associated with any software you find on the internet. 
 
         In order for the software to be open, it must follow the [Open Source Initiative definition](https://opensource.org/osd){target=_blank}
-
-
