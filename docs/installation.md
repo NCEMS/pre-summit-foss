@@ -9,11 +9,17 @@ We will be using several services that require you to create a user account.
 | Account | Notes |
 | --- | --- |
 | [:material-github: GitHub](https://github.com){target=_blank} |  GitHub will be used to store lecture materials and your own work. We will use [GitHub Education](https://education.github.com/){target=_blank} and its free features for hands-on.
-| [CyVerse](https://user.cyverse.org/signup){target=_blank} | We will introduce you to CyVerse which is a powerful cloud computer with large data storage.
+| [CyVerse](https://user.cyverse.org/signup){target=_blank} | When creating your account, use the same email address you provided to NCEMS
+
+## Sign up for CyVerse NCEMS workshop
+
+After creating your CyVerse Account (see above), enroll yourself in the NCEMS Pre Summit FOSS workshop: [https://user.cyverse.org/workshops/192](https://user.cyverse.org/workshops/192){target=_blank}.
+
+This will enable CyVerse's data science workbench, the [Discovery Environment](https://de.cyverse.org){target=_blank}, and its interactive Applications in [VICE](https://learning.cyverse.org/de/){target=_blank}
 
 ??? Tip "Dual Monitors vs Side-by-Side"
 
-    We strongly recommend you have dual monitors set-up while attending virtual FOSS Zoom lessons.
+    We strongly recommend you have dual monitors set-up while attending virtual FOSS Zoom sessions.
 
     We will be doing a lot of screen-sharing, and this will make your own interactive sessions less visible, or you will have to make them less than full screen.
 
