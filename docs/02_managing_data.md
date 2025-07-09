@@ -510,3 +510,33 @@ Test your knowledge with the following questions.
   - Repository registry service: [http://www.re3data.org/](http://www.re3data.org/)
 
 <!-- end list -->
+
+## Breakouts
+
+!!! Question "Breakout 1"
+
+    **Discussion Questions**
+
+    What are the two or three data types that you most frequently work with?
+
+    Think about the sources (observational, experimental, simulated, compiled/derived) - Also consider the formats (tabular, sequence, database, image, etc.)
+
+    What is the scale of your data?
+
+    What is your strategy for storing and backing up your data?
+
+    What is your strategy for verifying the integrity of your data? (i.e. verifying that your data has not be altered)
+
+    What is your strategy for searching your data?
+
+    What is your strategy for sharing (and getting credit for) your data? (i.e. How will do you share with your community/clients? How is that sharing documented? How do you evaluate the impact of data shared? )  
+
+!!! Question "Breakout 2"
+
+    Choosing the right license.
+
+    General guidance on how to choose a license: [https://choosealicense.com/](https://choosealicense.com/)
+
+    More good guidance on how to choose a license: [https://opensource.guide/legal/](https://opensource.guide/legal/)
+
+
