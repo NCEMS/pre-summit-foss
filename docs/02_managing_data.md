@@ -149,7 +149,7 @@ Good metadata is the difference between a dataset being a digital artifact and a
 * **Structural:** How is the data organized? (Variable names, data types, relationships, schema location).
 * **Administrative:** How can I use it? (License, version, access rights, owner).
 
-Metadata standards include [DataCite](https://schema.datacite.org/), [Minimum Information [about any] Sequence (MIxS)](https://genomicsstandardsconsortium.github.io/mixs/){target=_blank} for genomic information, the Library of Integrated Network-based Cellular Signatures (LINCS) program and Minimum Information about a Perturbation Experiment (MIAPE)](https://www.nature.com/articles/nbt1329){target=_blank} format.
+Metadata standards include [DataCite](https://schema.datacite.org/), [Minimum Information [about any] Sequence (MIxS)](https://genomicsstandardsconsortium.github.io/mixs/){target=_blank} for genomic information, the Library of Integrated Network-based Cellular Signatures (LINCS) program and [Minimum Information about a Perturbation Experiment(MIAPE)](https://www.nature.com/articles/nbt1329){target=_blank} format.
 
 **Other Important Standards and Resources:**
 
