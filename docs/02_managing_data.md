@@ -395,6 +395,96 @@ In our next session, we will put these principles into practice in a hands-on wo
 
 -----
 
+## Self Assessment
+
+Test your knowledge with the following questions.
+
+??? Question "True or False: The biggest challenge to effective data management is the high upfront cost of storage and software."
+
+    ??? Failure "False"
+
+        The lesson states, "The biggest challenge to data management is **making it an afterthought**." 
+        
+        Poor data management doesn't have a high upfront cost, but the consequences of neglecting it can be severe later on.
+
+??? Question "Multiple Choice: What is the primary role of a schema in making data AI-ready?"
+    
+    A. To assign a unique identifier to the dataset.
+
+    B. To define the ethical use of the data.
+    
+    C. To provide a formal, machine-readable definition of the data's structure.
+    
+    D. To convert data into a vector embedding.
+    
+    ??? Success "Answer"
+
+        **C. To provide a formal, machine-readable definition of the data's structure.** 
+        
+        A schema acts as a blueprint, defining field names, data types, and constraints, which is critical for automated validation and analysis by AI tools.
+
+??? Question "Multiple Choice: The 'A' in the FAIR data principles stands for:"
+    
+    A. Authentic
+    
+    B. Accessible
+    
+    C. Accountable
+    
+    D. Automated
+
+    ??? Success "Answer"
+
+        **B. Accessible.** 
+        
+        The FAIR principles are **F** indable, **A** ccessible, **I** nteroperable, and **R** eusable.
+
+??? Question "True or False: For data to be considered FAIR, it must be made fully open and public without any access restrictions."
+    
+    ??? Failure "False"
+
+        The FAIR principles are distinct from "open." The 'A' for Accessible states that the protocol allows for authentication and authorization where necessary. Metadata should be accessible even if the data itself is not.
+
+??? Question "Multiple Choice: Which set of principles was specifically designed to address Indigenous Data Governance and ensure collective benefit and authority to control for Indigenous communities?"
+   
+    A. FAIR
+    
+    B. TRUST
+    
+    C. CARE
+    
+    D. OPEN
+    
+    ??? Success "Answer"
+
+        **C. CARE** 
+        
+        The **CARE** Principles (Collective Benefit, Authority to Control, Responsibility, and Ethics) are people-focused and complementary to the data-focused FAIR principles.
+
+??? Question "Multiple Choice: What is the primary function of Retrieval-Augmented Generation (RAG) in the context of AI and scientific data?"
+    
+    A. To create a unique license for a dataset.
+    
+    B. To ground a Large Language Model (LLM) in factual data from a specific database to prevent hallucination.
+    
+    C. To convert tabular data into a more efficient, cloud-native format like Parquet.
+    
+    D. To search for datasets using semantic meaning instead of keywords.
+    
+    ??? Success "Answer"
+
+        **B. To ground a Large Language Model (LLM) in factual data from a specific database to prevent hallucination.** 
+        
+        RAG retrieves relevant information from a trusted source and adds it as context to the LLM's prompt to generate factually-grounded answers.
+
+??? Question "True or False: When you create a new dataset or software, it is automatically licensed with an open-source license like MIT or Creative Commons."
+    
+    ??? Failure "False"
+
+        The lesson states, "By default, when you make a creative work, that work is under exclusive copyright." You must explicitly add a license to specify how others can use, modify, and share your work.
+
+-----
+
 ### References and Resources
 
   - [DataOne best practices](https://dataoneorg.github.io/Education/bestpractices/)
