@@ -149,7 +149,21 @@ Good metadata is the difference between a dataset being a digital artifact and a
 * **Structural:** How is the data organized? (Variable names, data types, relationships, schema location).
 * **Administrative:** How can I use it? (License, version, access rights, owner).
 
-Standards like [DataCite](https://schema.datacite.org/), [Dublin Core](http://www.dublincore.org/specifications/dublin-core/dcmi-terms/), and [SpatioTemporal Asset Catalog (STAC)](https://stacspec.org/) for geospatial data provide a formal specification for metadata, turning it into a reliable tool for automated discovery.
+Metadata standards include [DataCite](https://schema.datacite.org/), [Minimum Information [about any] Sequence (MIxS)](https://genomicsstandardsconsortium.github.io/mixs/){target=_blank} for genomic information, the Library of Integrated Network-based Cellular Signatures (LINCS) program and Minimum Information about a Perturbation Experiment (MIAPE)](https://www.nature.com/articles/nbt1329){target=_blank} format.
+
+**Other Important Standards and Resources:**
+
+[**MIBBI (Minimum Information for Biological and Biomedical Investigations)**](https://www.dcc.ac.uk/resources/metadata-standards/mibbi-minimum-information-biological-and-biomedical-investigations){target=_blank}: A portal that provides access to over 40 biomedical data standards. 
+
+[**OME (Open Microscopy Environment)**](https://www.openmicroscopy.org/ome-files/){target=_blank}: A data model and file format for microscopy data. 
+
+[**Darwin Core**](https://dwc.tdwg.org/){target=_blank}: A standard for sharing information about biological diversity. 
+
+**[Dublin Core](http://www.dublincore.org/specifications/dublin-core/dcmi-terms/){target=_blank}**: A general metadata standard applicable to various resources. 
+
+[**PDBx/mmCIF**](https://rd-alliance.github.io/metadata-directory/standards/pdbx-mmcif.html){target=_blank}: The standard for the Protein Data Bank. 
+
+[**Metadatasheet**](https://pubmed.ncbi.nlm.nih.gov/38778016){target=_blank}: A metadata standard designed to align with the data lifecycle, allowing for synchronous metadata recording within Microsoft Excel. 
 
 #### Schema: The Blueprint for Your Data
 
