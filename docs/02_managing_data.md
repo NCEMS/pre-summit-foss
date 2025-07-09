@@ -109,9 +109,9 @@ The resources below are key for publishing and citing MCB data.
 
     ![lifecycle](assets/data_life_cycle.png)
 
-    Image from [Strasser *et al*](https://www.dataone.org/sites/all/documents/DataONE_BP_Primer_020212.pdf).
+    Image from [Strasser *et al*](https://repository.oceanbestpractices.org/handle/11329/502?show=full){target=_blank}.
 
-The summary below integrates traditional best practices, adapted from the excellent [DataONE best practices primer](https://old.dataone.org/sites/all/documents/DataONE_BP_Primer_020212.pdf), with modern approaches for creating cloud-native, AI-ready data products.
+The summary below integrates traditional best practices, adapted from the excellent [DataONE best practices primer](https://repository.oceanbestpractices.org/handle/11329/502?show=full){target=_blank}, with modern approaches for creating cloud-native, AI-ready data products.
 
 ### Plan
 
