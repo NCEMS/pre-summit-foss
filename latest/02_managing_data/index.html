@@ -864,7 +864,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Conclusion &amp; Next Steps">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self Assessment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Self Assessment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1221,7 +1230,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Conclusion &amp; Next Steps">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self Assessment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Self Assessment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1690,6 +1708,79 @@
 <p>This foundation not only accelerates traditional research but also unlocks the transformative power of modern AI to search, synthesize, and reason about scientific knowledge in ways that were never before possible.</p>
 <p>In our next session, we will put these principles into practice in a hands-on workshop where we will define a schema for a dataset, catalog it using STAC, and build a simple RAG-based chatbot to answer questions about it.</p>
 <hr />
+<h2 id="self-assessment">Self Assessment<a class="headerlink" href="#self-assessment" title="Permanent link">&para;</a></h2>
+<p>Test your knowledge with the following questions.</p>
+<details class="question">
+<summary>True or False: The biggest challenge to effective data management is the high upfront cost of storage and software.</summary>
+<details class="failure">
+<summary>False</summary>
+<p>The lesson states, "The biggest challenge to data management is <strong>making it an afterthought</strong>." </p>
+<p>Poor data management doesn't have a high upfront cost, but the consequences of neglecting it can be severe later on.</p>
+</details>
+</details>
+<details class="question">
+<summary>Multiple Choice: What is the primary role of a schema in making data AI-ready?</summary>
+<p>A. To assign a unique identifier to the dataset.</p>
+<p>B. To define the ethical use of the data.</p>
+<p>C. To provide a formal, machine-readable definition of the data's structure.</p>
+<p>D. To convert data into a vector embedding.</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>C. To provide a formal, machine-readable definition of the data's structure.</strong> </p>
+<p>A schema acts as a blueprint, defining field names, data types, and constraints, which is critical for automated validation and analysis by AI tools.</p>
+</details>
+</details>
+<details class="question">
+<summary>Multiple Choice: The 'A' in the FAIR data principles stands for:</summary>
+<p>A. Authentic</p>
+<p>B. Accessible</p>
+<p>C. Accountable</p>
+<p>D. Automated</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B. Accessible.</strong> </p>
+<p>The FAIR principles are <strong>F</strong> indable, <strong>A</strong> ccessible, <strong>I</strong> nteroperable, and <strong>R</strong> eusable.</p>
+</details>
+</details>
+<details class="question">
+<summary>True or False: For data to be considered FAIR, it must be made fully open and public without any access restrictions.</summary>
+<details class="failure">
+<summary>False</summary>
+<p>The FAIR principles are distinct from "open." The 'A' for Accessible states that the protocol allows for authentication and authorization where necessary. Metadata should be accessible even if the data itself is not.</p>
+</details>
+</details>
+<details class="question">
+<summary>Multiple Choice: Which set of principles was specifically designed to address Indigenous Data Governance and ensure collective benefit and authority to control for Indigenous communities?</summary>
+<p>A. FAIR</p>
+<p>B. TRUST</p>
+<p>C. CARE</p>
+<p>D. OPEN</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>C. CARE</strong> </p>
+<p>The <strong>CARE</strong> Principles (Collective Benefit, Authority to Control, Responsibility, and Ethics) are people-focused and complementary to the data-focused FAIR principles.</p>
+</details>
+</details>
+<details class="question">
+<summary>Multiple Choice: What is the primary function of Retrieval-Augmented Generation (RAG) in the context of AI and scientific data?</summary>
+<p>A. To create a unique license for a dataset.</p>
+<p>B. To ground a Large Language Model (LLM) in factual data from a specific database to prevent hallucination.</p>
+<p>C. To convert tabular data into a more efficient, cloud-native format like Parquet.</p>
+<p>D. To search for datasets using semantic meaning instead of keywords.</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B. To ground a Large Language Model (LLM) in factual data from a specific database to prevent hallucination.</strong> </p>
+<p>RAG retrieves relevant information from a trusted source and adds it as context to the LLM's prompt to generate factually-grounded answers.</p>
+</details>
+</details>
+<details class="question">
+<summary>True or False: When you create a new dataset or software, it is automatically licensed with an open-source license like MIT or Creative Commons.</summary>
+<details class="failure">
+<summary>False</summary>
+<p>The lesson states, "By default, when you make a creative work, that work is under exclusive copyright." You must explicitly add a license to specify how others can use, modify, and share your work.</p>
+</details>
+</details>
+<hr />
 <h3 id="references-and-resources">References and Resources<a class="headerlink" href="#references-and-resources" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://dataoneorg.github.io/Education/bestpractices/">DataOne best practices</a></li>
@@ -1721,7 +1812,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-07-07
+    2025-07-09
   </span>
 
     
