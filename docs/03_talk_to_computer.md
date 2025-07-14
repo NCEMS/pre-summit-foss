@@ -1,12 +1,67 @@
-# How to Talk to Computers
+# How to Talk to Computers 
 
-## The Command Line Interface
+**:material-lightbulb-on: Imagine, Your Lab in the Cloud**
 
-When using a computer, it is typical to use a keyboard and mouse to navigate a cursor across the screen or simply tap on the screens of our smart phones or tablets. Both of these methods make use of the Graphical User Interface (GUI) and have become central to the way we interact with computers. GUIs make computers so easy to use! 
+Welcome to scientific research computing in the 21st century! 
 
-However, for a more direct and powerful way to instruct your computer, you should learn to use the **Command Line Interface (CLI)**. CLIs are found throughout all operating systems (Windows, MacOS, Linux) though they might have different commands and syntax. 
+While using a mouse in a Graphical User Interface (GUI) is more familiar to most of us, the real power of reproducible science comes from the Command Line Interface (CLI). 
 
-For this FOSS lesson on CLI, we will focus on the Unix CLI which is present in MacOS and all Linux operating systems. 
+The CLI allows you to give precise, text-based instructions to a computer, automating tasks and managing massive datasets in ways a GUI cannot.
+
+In this lesson, you'll learn to use the CLI on [CyVerse](https://de.cyverse.org){target=_blank}, a powerful, cloud-based platform designed for science. Instead of installing complex software on your own machine, you'll use CyVerse to access everything you need right from your web browser. 
+
+## What is CyVerse?
+
+CyVerse is not just one tool, but a comprehensive _cyberinfrastructure_ built to support researchers throughout the entire data lifecycle ([Swetnam et al. 2024](https://doi.org/10.1371/journal.pcbi.1011270){target=_blank}). 
+
+It's composed of four main integrated platforms:
+
+**Data Management**: At its core, CyVerse provides a robust, large-scale data storage system. It allows you to store, manage, and share massive datasets securely and provides tools for high-speed data transfer. We'll be using this [Data Store](https://data.cyverse.org){target=_blank} today.
+
+**Discovery Environment (DE)**: The [DE](https://de.cyverse.org){target=_blank} is a web-based portal for accessing scientific tools and workflows. You can use its intuitive interface to launch analyses, from simple virtual machines to complex, multi-step bioinformatics pipelines, without needing to be an expert in high-performance computing.
+
+**Cloud Native Services**: For more advanced users, CyVerse offers a container-based, composable infrastructure that runs on [NSF's Jetstream-2 Cloud](https://jetstream-cloud.org){target=_blank}, AWS, GCloud, or Azure. These Infrastructure as Code (IaC) tools allows you to deploy your own custom applications and services at scale, giving you greater flexibility and control over your computational environments.
+
+**Artificial Intelligence (AI/ML)**: [AI-Verde](https://chat.cyverse.ai){target=_blank}, provides access to cutting-edge hardware, including GPUs, and pre-configured tools to support generative AI (LLMs). In the Discovery Environment, and on Jetstream-2, we support a wide array of machine learning and artificial intelligence research. These platforms makes it easier to train, test, and deploy AI models on large datasets.
+
+Today, we will use the **Data Store** to move files and the **Discovery Environment** to launch virtual analyses. We will briefly introduce generative AI tools. Next week, we'll focus on the AI/ML platforms to run a large language model and practice prompt engineering in more depth.
+
+### CyVerse Account Creation
+
+1. Create your account: [https://user.cyverse.org](https://user.cyverse.org){target=_blank}
+
+    You should be prompted to set a valid email address, an then create a password. For the sake of this workshp, use the same email address you gave to NCEMS staff.
+
+2. Enroll in the NCEMS workshop: [https://user.cyverse.org/workshops/192](https://user.cyverse.org/workshops/192){target=_blank}
+
+    As part of NCEMS, you will be granted special access to CyVerse. 
+
+    We have pre-registered the email account you enrolled with NCEMS in the workshop enrollment form. 
+
+    AFTER you have created and verified your CyVerse account, go to the Workshops in the User Portal and find the NCEMS workshop. Click on 'Enroll' to be automatically added to the workshop.
+
+    Your account will be promoted and you will be given access to the Discovery Environment's interactive applications (which we will use in the next section)
+
+3. Log into the Discovery Environment (DE): [https://de.cyverse.org](https://de.cyverse.org){target=_blank}
+
+### Discovery Environment Tour
+
+If this is your first time logging into the DE, allow the Tour to show you all of the GUI features.
+
+### Starting a VICE App
+
+Let's start out with the [:octicons-terminal-24: Cloud Shell](https://de.cyverse.org/apps/de/5f2f1824-57b3-11ec-8180-008cfa5ae621/launch){target=_blank}
+
+Interactive Apps (GUI) can be found in the [Featured Apps list](https://de.cyverse.org/apps){target=_blank}
+
+Launch a Cloud Shell from the list or from the quick launch icon in the Tool Bar by clicking on the :octicons-terminal-24: icon.
+
+## The Unix Shell
+
+The CLI sees the computer stripped down to only a [Terminal](https://en.wikipedia.org/wiki/Terminal_emulator){target=_blank} from where one can run powerful commands executed through the [Shell](https://en.wikipedia.org/wiki/Shell_(computing)){target=_blank}.
+
+Though there are technical differences between them, the terms **Command Line Interface**, **Terminal**, **Shell**, and **BASH** will be used more or less interchangeably throughout the lesson. 
+
 
 <br>
 <br>
@@ -37,49 +92,414 @@ For this FOSS lesson on CLI, we will focus on the Unix CLI which is present in M
 
             To quickly open the folder, open :simple-linux: WSL and execute `explorer.exe .`. This will open a folder in Windows at the Linux Home folder. 
 
-<br>
-<br>
 
----
+## Managing Your CyVerse Data with GoCommands
 
-<br>
-<br>
+Before launching an analysis, you need a way to move data between your personal computer and the CyVerse Data Store. The best tool for this is [`gocmd`](https://learning.cyverse.org/ds/gocommands/){target=_blank}, a command-line client written by CyVerse research software engineers in Google's Go langauge. 
 
-## The Unix Shell
+You can install and run `gocmd` in your computer's terminal to move files from your computer(s) into CyVerse. You can also use `gocmd` to move files around CyVerse Data Store.
 
-The CLI sees the computer stripped down to only a [Terminal](https://en.wikipedia.org/wiki/Terminal_emulator) from where one can run powerful commands executed through the [Shell](https://en.wikipedia.org/wiki/Shell_(computing)).
+1. Install and Configure GoCommands
 
+Installation instructions vary by operating system (Windows, macOS, Linux). Please follow the complete, up-to-date guide on the CyVerse Learning site.
 
-Though there are technical differences between them, the terms **Command Line Interface**, **Terminal**, **Shell**, and **BASH** will be used more or less interchangeably throughout the lesson. 
+!!! info "GoCommands Installation Guide"
+    
+    Visit the [official GoCommands Installation and Configuration Guide](https://learning.cyverse.org/ds/gocommands/configuration/){target=_blank} and follow the steps for your operating system.
 
-<figure markdown>
-  <a target="blank" rel="cli">![cli](./assets/cli.gif){width=500} </a>
-    <figcaption> The Terminal shell</figcaption>
-</figure>
-
-<br>
-<br>
-
-<figure markdown="span">
-    <iframe width="526" height="340" src="https://www.youtube.com/embed/fhv2dX0axeY" title="What do tutorials mean when they say my shell? Developer Fundamentals" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <vidcaption> <br>Quick video on the shell.</vidcaption> 
-</figure>
+    Optionally, add the `gocmd` binary to your `PATH` environmental variable or `.bashrc`
 
 
+The most important step is running `gocmd init` to connect the tool to your CyVerse account.
 
-<br>
-<br>
+You will be queried to enter CyVerse specific information for the Data Store. You can leave the [default values for the configuration](https://learning.cyverse.org/ds/gocommands/configuration/#using-the-init-command){target=_blank}. 
+
+| Configuration Key | Value |
+|-------------------|-------|
+| `irods_host`      | `data.cyverse.org` |
+| `irods_port`      | `1247` |
+| `irods_zone_name` | `iplant` |
+| `irods_user_name` |  `<CyVerse Username>` |
+| `irods_user_password` | `<CyVerse Password>` |
+
+Use these credentials for `anonymous` access to the Data Store:
+
+| Configuration Key | Value |
+|-------------------|-------|
+| `irods_user_name` | `anonymous` |
+| `irods_user_password` | (leave empty) |
+
+
+
+```mermaid
+graph LR
+    subgraph "Your Local Machine"
+        direction LR
+        Local_PC[("💻<br>Local Computer")]
+        Local_Files["Local Files<br>(e.g., my_data.csv)"]
+    end
+
+    subgraph "CyVerse Cloud Platform"
+        direction TB
+        
+        subgraph "Jupyter Lab (Ephemeral Storage)"
+            direction TB
+            VM["⚙️ Jupyter Lab VM"]
+            VM_FS["VM Filesystem<br>(/home/jovyan, etc.)"]
+            VM_Mount["/data-store<br>(Mount Point)"]
+            VM --> VM_FS
+            VM --> VM_Mount
+        end
+
+        subgraph "CyVerse Data Store (Persistent iRODS Storage)"
+            direction TB
+            iRODS[("☁️<br>iRODS Data Store")]
+            iRODS_Home["/iplant/home/&lt;user&gt;"]
+            iRODS_Shared["/iplant/home/shared"]
+            iRODS --> iRODS_Home
+            iRODS --> iRODS_Shared
+        end
+
+        VM_Mount -- "Mounted via<br>Kubernetes CSI Driver" --> iRODS
+    end
+
+    Local_PC -- "Transfer via<br>gocmd put/get" --> iRODS
+
+    classDef system fill:#f0f9ff,stroke:#0ea5e9,stroke-width:2px;
+    classDef storage fill:#eef2ff,stroke:#6366f1;
+    classDef connector stroke-dasharray: 5 5;
+    class Local_PC,VM,iRODS system;
+    class Local_Files,VM_FS,VM_Mount,iRODS_Home,iRODS_Shared storage;
+```
+
+1. Transfer Data
+   
+Once installed and configured, you can manage your files from your local terminal. Here are the essential commands:
+
+| Command | Explanation |
+|---------|-------------|
+| `gocmd ls` | list the contents of your home directory in the CyVerse Data Store. |
+| `gocmd put <local_file>` | put (upload) a file from your computer to your CyVerse home directory. |
+| `gocmd get <cyverse_file>` | get (download) a file from your CyVerse home directory to your computer. |
+
+Example: Let's say you have a file my_data.csv on your computer that you want to analyze in CyVerse.
+
+On your local computer's terminal
+
+First, upload the file to CyVerse
+
+```bash
+gocmd put my_data.csv
+```
+
+You can verify it's there by listing your files
+
+```bash
+gocmd ls
+```
+
+Now the file is in the CyVerse Data Store, ready to be used in an analysis.
+
+??? Tip "Other ways to move data to CyVerse"
+
+    There are several ways to access the Data Store. These methods vary in speed, flexibility, and technical knowledge required. Different methods may suit your needs for different projects at different times.
+
+    | Method | Access Point | OS | Upload/Download | Installation/Setup Required | Account Required | Max File Size |
+    |--------|--------------|----|-----------------|-----------------------------|-----------------|---------------|
+    | Discovery Environment  | Web                        | Any              | Both            | No                          | Yes                      | 2GB/file upload, no limit for import |
+    | WebDAV                 | Web & Command line         | Any              | Both            | No                          | Yes (No for public data) | No limit              |
+    | GoCommands             | Command line               | Any              | Both            | Yes                         | Yes (No for public data) | No limit              |
+    | iCommands              | Command line               | Linux & macOS    | Both            | Yes                         | Yes (No for public data) | No limit              |
+    | SFTP                   | Desktop App & Command line | Any              | Both            | No (Yes for desktop app)    | Yes (No for public data) | No limit              |
+
+
+??? Tip "Not Comfortable with the CLI yet?"
+
+    That is totally okay! 
+
+    There are many GUI based ways to move data to CyVerse Data Store.
+
+    * [Discovery Environment](https://de.cyverse.org/data/){target=_blank}
+
+    * [CyberDuck](https://learning.cyverse.org/ds/sftp/cyberduck){target=_blank}
+
+    * [FileZilla](https://learning.cyverse.org/ds/sftp/filezilla/){target=_blank}
+
+### CyVerse VM File System Layout (Ubuntu)
+
+This diagram illustrates the typical file system structure you'll encounter in a CyVerse virtual machine.
+
+```mermaid
+graph TD
+    A["/ (root)"]:::dir;
+
+    subgraph "Standard Linux Directories"
+        A --> B["/home"];
+    end
+
+    subgraph "User Home Directory"
+        B --> C["/home/jovyan"];
+    end
+
+    subgraph "CyVerse Data (Mounted via Kubernetes)"
+        A --> D["/data-store (Physical Mount Point)"];
+        D --> D_Home["/data-store/home"];
+        D --> D_Shared["/data-store/shared"];
+        D_Home --> D_User["/data-store/home/&lt;cyverse-username&gt;<br/>(Personal Data)"];
+        D_Shared --> D_Community["Community & Published Data"];
+    end
+    
+    subgraph "Symbolic Link for Convenience"
+         C --> E["/home/jovyan/data-store<br/>(Symbolic Link)"];
+    end
+
+    %% --- Links ---
+    E-.->|links to| D;
+
+    %% --- Styling ---
+    classDef dir fill:#e6f4ff,stroke:#6ba2d1,stroke-width:2px;
+    class A,B,C,D,D_Home,D_Shared,D_User,D_Community,E dir;
+```
+
+Diagram Key
+
+Solid Lines (`-->`): Represent a direct parent-child relationship in the file system (e.g., /home is inside /).
+
+Dotted Lines (`-.->`): Represent a symbolic link. The `/home/jovyan/data-store` folder is a shortcut that points directly to the `/data-store` mount point.
+
+`/data-store`: This is not a normal directory. It's a special mount point managed by Kubernetes, connecting your virtual machine to the main CyVerse Data Store.
+
+## Launching a Virtual Machine in the DE
+
+Now that your data is in the cloud, you can launch a virtual machine to work with it. We recommend starting with a Cloud Shell, or Jupyter Lab, as both provide a user-friendly interface with a built-in terminal.
+
+### Log in to the CyVerse Discovery Environment.
+
+Click the [Apps button](https://de.cyverse.org/applications){target=_blank} to open the Apps window.
+
+Search for a "Jupyter Lab" and select the latest version.
+
+On the App page, you can give your analysis a name. For now, the default settings are fine.
+
+Click Launch Analysis. Your App will take a few moments to start.
+
+Once the status says "Running," click the hyperlink for your analysis. A new browser tab will open with your Jupyter Lab session.
+
+The Gateway to Commands: The Terminal
+All actions from this point forward will be performed inside the terminal of your CyVerse virtual machine.
+
+To Open the Terminal in Jupyter Lab: Click the File menu -> New -> Terminal.
+
+You will see a window with a prompt, waiting for your commands. This is the Shell.
+
+### File System Navigation
+
+The commands for navigating the file system in your VM are the same standard Unix commands you would use elsewhere.
+
+| Command | Explanation |
+| `pwd` | print working directory (shows you where you are) |
+| `ls -F` | list the contents of a directory with file-type indicators (/ for dir) |
+| `cd <directory>` | change directory |
+| `mkdir <directory>` | make a new directory |
+| `mv <source> <destination>` | move or rename a file or directory |
+| `rm <file>` | remove (delete) a file |
+
+First, you'll need to get the data you uploaded with gocmd from the Data Store into your running VM. For this, we use `gocmd get`  to move files.
+
+#### In your CyVerse VM Terminal
+
+##### Download the file from the Data Store to your VM
+
+```bash
+cd
+
+gocmd get --progress /iplant/home/shared/NCEMS/pre-summit-foss/sample-data .
+```
+
+The `get` command tells the `gocmd` program to "get" or download data. the `--progress` command tells the program to print out verbose updates as the download runs.
+
+
+Now you can see it in your VM's file system
+
+```bash
+ls -F
+```
+
+Is the `pre-summit-foss/` folder there? What do you see?
+
+### Create a reproducible Python environment with a package manager
+
+To ensure your analysis is reproducible, you should define the exact software and versions you need. We can do this using a Conda environment managed by `mamba`, a fast implementation of the `conda` package manager.
+
+We will define our environment in a special file called `environment.yaml`
+
+1. Create the Environment File
+In your terminal, create the file using the nano text editor:
+
+```bash
+cd ~/pre-summit-foss/sample-data
+ls -F
+cat cowsay.yml
+```
+
+```yaml
+# environment.yml
+# This file defines the Conda environment for the CLI art app.
+#
+# To create the environment, run:
+# conda env create -f environment.yml
+# To activate the environment, run:
+# conda activate cli_art_env
+#
+# IMPORTANT: This app also requires the following command-line tools
+# which should be installed with your system's package manager:
+#
+# On Debian/Ubuntu (using apt-get):
+#   sudo apt-get update
+#   sudo apt-get install cowsay fortune lolcat
+#
+# On macOS (using Homebrew):
+#   brew install cowsay fortune lolcat
+#
+# On Fedora/CentOS (using dnf):
+#   sudo dnf install cowsay fortune-mod lolcat
+
+name: cowsay
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.9
+  - pip
+  - rich
+```
+
+
+??? Tip "Conda vs Mamba"
+
+    [Conda](https://conda.org){target=_blank} is the original, industry-standard, open-source system for managing packages and environments for any language. It is robust and widely trusted.
+
+    [Mamba](https://mamba.readthedocs.io/){target=_blank} is a re-implementation of the `conda` package manager in C++. It uses the same commands and configuration but dramatically improves speed by using parallel processing for downloading packages and a much faster dependency solver. For our purposes, it is a drop-in replacement for `conda` that will make setting up our environments much faster.
+
+    You might also be familiar with `pip`, Python's standard package manager, which installs packages from the Python Package Index (PyPI). While Conda/Mamba can manage packages for any language and even the Python interpreter itself, `pip` is exclusively for Python. It's common to use `pip` to install a package inside a Conda environment if that package isn't available on Conda channels. The general rule is to use Conda/Mamba whenever possible, and then use `pip` for any remaining Python-specific packages.
+
+
+1. Build and Activate the Environment
+   
+Now, use `mamba` to create the environment from your file.
+
+```bash
+mamba env create -f cowsay.yml
+```
+
+Approve the installation
+
+Mamba will download and install the specified packages. Once it's finished, you can activate your new environment to start using it.
+
+```bash
+conda activate cowsay
+```
+
+Your terminal prompt should now change to show (plotting_env), indicating that you are inside the environment. Any command you run will use the software installed there.
+
+To exit the environment, simply run:
+
+```bash
+conda deactivate
+```
+
+#### Run the app
+
+After you've activated the new conda environment, run the app.
+
+```
+python cowsay.py
+```
+
+What happens?
+
+#### Managing Analyses
+
+In the [https://de.cyverse.org/analyses](https://de.cyverse.org/analyses){target=_blank} you can view your running or completed analyses.
+
+Your analysis should have an active timer counting down, if it is still active. You can extend the time by clicking on the ellipses and selecting extend time.
+
+You can also terminate your app by clicking on the red X. 
+
+Note: apps will time out on their own, but they will burn your valuable allocation hours if left running.
+
+Practice shutting down your app by clicking on the check box and terminating it.
+
+## Jupyter Lab GPUs w/ Ollama
+
+Start a new App. 
+
+In Apps, [https://de.cyverse.org/apps](https://de.cyverse.org/apps){target=_blank} choose a [Jupyter Lab Pytorch GPU](https://de.cyverse.org/apps/de/e19a5772-94e6-11ec-b1f0-008cfa5ae621/launch)
+
+!!! Tip "Waiting for apps to start"
+
+    When you start an interactive application expect to wait a minute or two. It should not take more than 5 minutes to start an Featured application -- private apps may take longer because their Docker container must be downloaded from an external registry into CyVerse.
+
+### Run Your Own AI Model with Ollama
+
+For advanced tasks, CyVerse offers Apps with Graphics Processing Units (GPUs), which are essential for AI and machine learning. These GPU-enabled Apps come with [Ollama](https://ollama.org){target=_blank} pre-installed. Ollama lets you easily run powerful, open-source Large Language Models (LLMs) locally within your private session.
+
+1. Download an AI Model
+To use a model, you first need to download it. We'll use `gemma:2b`, a relatively small but capable model from Google. This command only needs to be run once per VM.
+
+#### In your CyVerse GPU VM Terminal
+
+1. Open a Terminal in your Jupyter Lab
+
+    Install a small Gemma model from the Ollama registry:
+
+    ```bash
+    # Install Ollama
+    pip install ollama
+    # Start Ollama Server
+    ollama serve
+    ```
+
+2. Run the Model 
+   
+    Open another terminal window.
+    
+    ```bash
+    ollama pull gemma:2b
+    ```
+    
+    Now you can run the model and interact with it directly from your command line.
+
+    ```bash
+    ollama run gemma:2b
+    ```
+
+    The prompt will change, and you can now ask the AI questions. Let's try one related to our last topic:
+
+    ```python
+    >>> What is the purpose of a conda environment?
+    ```
+
+    The model will generate a detailed explanation right in your terminal. To exit the Ollama session, type `/bye` and press Enter.
+
+This gives you a powerful, private AI assistant that can help you write code, debug errors, and understand complex topics—all within your secure CyVerse environment. We will explore this in much more detail in the next lesson!
+
 
 ## Introductory Shell Commands
 
-The following tutorial material was taken from the [Carpentries' Shell Module](https://swcarpentry.github.io/shell-novice/). 
+The following tutorial material was taken from the [Carpentries Shell Module](https://swcarpentry.github.io/shell-novice/). 
 
 !!! info "Download Some Data from the Carpentries"
+    
     To follow along with the tutorial, please download and unzip this data. [shell-lesson-data.zip](https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip) 
         
     ??? Tip "The Command Line Way to Download and Unzip!"
+        
         Execute the following commands:
-        ```
+        
+        ```bash
         $ sudo apt install unzip
         $ wget https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip
         $ unzip shell-lesson-data.zip
@@ -90,7 +510,9 @@ The following tutorial material was taken from the [Carpentries' Shell Module](h
 <br>
 
 ??? info "Help with Commands"
+    
     For every command, typing `man` (manual) before the command, will open the manual for said command.
+    
     ```
     $ man ls
     ```
@@ -99,7 +521,9 @@ The following tutorial material was taken from the [Carpentries' Shell Module](h
 
 
 ??? info "Command Flags"
+    
     Each command has **flags**, or options that you can specify. which are summoned with a `-`, such as `<command> -<flag>`.
+    
     ```
     $ ls -a -l -h
     ```
@@ -109,6 +533,7 @@ The following tutorial material was taken from the [Carpentries' Shell Module](h
     - If you do not know what flags are available, you can refer to the `man` command (or for many tools, use the `-h` (help) flag).
 
 ??? info "Tips for Directory Navigation"
+    
     `.` refers to *current* directory
 
     `..` refers to *above* directory
@@ -118,6 +543,7 @@ The following tutorial material was taken from the [Carpentries' Shell Module](h
     `~` indicates the home directory
 
     For example:
+    
     ```
     $ ls .            # lists files and folders in the current directory
     $ ls ..           # lists files and folders in the above directory
@@ -168,7 +594,7 @@ shell-lesson-data/   shell-lesson-data.zip*
 
 We can then move inside the folder of our choice doing `cd`. Doing `ls` following the opening of the folder of choice, will show the contents of the folder you just moved in. Feel free to explore the contents of the folders by using `cd` and `ls`.
 
-```
+```bash
 $ cd shell-lesson-data
 $ ls -F
 
@@ -185,19 +611,19 @@ animal-counts/  creatures/  numbers.txt*  proteins/  writing/
 !!! Tip "Use the Tab key to autocomplete"
     You do not need to type the entire name of a folder or file. By using the tab key, the Shell will autocomplete the name of the files or folders. For example, typing the following
 
-    ```
+    ```bash
     $ ls -F exer
     ```
 
     and pressing the tab key, will result in autocompletion.
 
-    ```
+    ```bash
     $ ls -F exercise-data/
     ```
 
     You can then press tab twice, to print a list of the contents of the folder.
 
-    ```
+    ```bash
     $ ls -F exercise-data/
     animal-counts/ creatures/     numbers.txt    proteins/      writing/ 
     ```
@@ -220,7 +646,7 @@ animal-counts/  creatures/  numbers.txt*  proteins/  writing/
 
 Return to `shell-lesson-data`, and create a directory with `mkdir <name of folder>`.
 
-```
+```bash
 $ mkdir my_folder
 $ ls -F
 
@@ -236,17 +662,19 @@ Notice the new `my_folder` directory.
     It is strongly suggested that you avoid using spaces when naming your files. When using the Shell to communicate with your machine, a space can cause errors when loading or transferring files. Instead, use dashes (`-`), underscores (`_`), periods (`.`) and CamelCase when naming your files.
         
     Acceptable naming:
-    ```
+
+    ```bash
     $ mkdir my_personal_folder
     $ mkdir my_personal-folder
     $ mkdir MyPersonal.Folder
     ```
-    <br>
+
 
     ??? Question "What will happen if you create a directory with spaces?"
 
         You will obtain as many folders as typed words!
-        ```
+
+        ```bash
         $ mkdir my folder
         $ ls -F
         exercise-data/  folder/  my/  north-pacific-gyre/
@@ -258,7 +686,7 @@ Notice the new `my_folder` directory.
 
 Create an empty file with `touch <name of file>`
 
-```
+```bash
 $ touch new_file.txt
 ```
 
@@ -267,7 +695,8 @@ $ touch new_file.txt
 <br>
 
 Add text to the new file
-```
+
+```bash
 nano new_file.txt 
 ```
 
@@ -276,7 +705,7 @@ nano new_file.txt
 
 Use `mv <name of file or folder you want to move> <name of destination folder>` to move your newly created file to the directory you created previously (you can then use `ls` to check if you successully moved the file).
 
-```
+```bash
 $ ls -F
 exercise-data/  new_file*  my_folder/  north-pacific-gyre/
 
@@ -287,9 +716,10 @@ exercise-data/  my_folder/  north-pacific-gyre/
 $ ls -F my_folder/
 new_file.txt*
 ```
+
 `mv` can also be used to **rename** a file or folder with  `mv <name of file or folder you want to change> <new name>`.
 
-```
+```bash
 $ cd my_folder/
 $ mv new_file my_file
 $ ls -F
@@ -302,7 +732,7 @@ my_file*
 
 `cp` is the command to copy a file with the syntax `cp <name of file you want to copy> <name of copy file>`
 
-```
+```bash
 $ cp my_file copy_my_file
 $ ls -F 
 copy_my_file*  my_file*
@@ -310,7 +740,8 @@ copy_my_file*  my_file*
 
 !!! note "Copying folders"
     To copy folders and the content of these folders, you will have to use the `-r` flag (recursive) for `cp` in the following manner `cp -r <name of folder you want to copy> <name of copy folder>` (following example is from the `shell-lesson-data/` directory).
-    ```
+
+    ```bash
     $ cp -r my_folder/ copy_my_folder
     $ ls -F
     copy_my_folder/  exercise-data/  my_folder/  north-pacific-gyre/
@@ -328,7 +759,7 @@ copy_my_file*  my_file*
 
 To remove an unwanted file, use `rm <name of file to remove>`.
 
-```
+```bash
 $ rm copy_my_file
 $ ls -F 
 my_file
@@ -336,7 +767,8 @@ my_file
 
 !!! note "Removing folders"
     Save as the "Copying Folders" note, you have to use the `-r` flag to remove a folder `rm -r <name of folder you want to remove>` (following example is from the `shell-lesson-data/` directory).
-    ```
+    
+    ```bash
     $ rm -r copy_my_folder/
     $ ls -F
     exercise-data/  my_folder/  north-pacific-gyre/
@@ -358,7 +790,7 @@ Here we are going to show an example command line automation using a shell scrip
 
 Navigate to the `shell-lesson-data` directory
 
-```
+```bash
 $ cd /home/jgillan/shell-lesson-data
 ```
 
@@ -366,7 +798,7 @@ $ cd /home/jgillan/shell-lesson-data
 
 Create the shell script
 
-```
+```bash
 $ nano backup.sh
 ```
 The text editor Nano will pop up and it will be empty.
@@ -375,7 +807,7 @@ The text editor Nano will pop up and it will be empty.
 
 Copy and paste the following commands into `backup.sh`
 
-```
+```bash
 #use Bash shell to run the following commands
 #!/bin/bash
 
@@ -391,7 +823,6 @@ TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 
 # name of the compressed backup file
 ARCHIVE_NAME="backup_$TIMESTAMP.tar.gz"
-
 
 # Create backup directory if it doesn't exist
 mkdir -p "$BACKUP_DIR"
@@ -410,20 +841,23 @@ Exit nano with `ctrl + x`
 <br>
 
 Modify permission to make the shell script executable
-```
+
+```bash
 $ chmod +x backup.sh
 ```
 
 <br>
 
 Run the shell script
-```
+
+```bash
 $ ./backup.sh
 ```
 
 <br>
 Go back to your home directory and look for the new backup directory
-```
+
+```bash
 $ cd ~
 $ cd ls
 ```
@@ -445,236 +879,3 @@ There should be a new directory called 'Backup' with a compressed file within it
 <br>
 
 ---
-
-<br>
-<br>
-<br>
-
-
-
-## LLM Chatbots for Open Science
-
-Large Language Model (LLM) chatbots have fundamentally changed how we humans are going to interact with computers going forward. They provide a natural language interface to instruct computers to do many tasks including:
-
-- Read, write, and summarize text
-- Analyze data
-- Explain techical topics
-- Search the web and retrieve information
-- Generate, optimize, and explain many types of computer code 
-- Understand and generate images
-
-<br>
-
-Current LLMs generally provide recommendation for how _you_ could do things. ie, they provide you code and text recommendations but don't actually execute anything. But these technologies are advancing quickly and new capabilities are developed and released constantly. Soon, [AI Agents](https://github.com/Significant-Gravitas/AutoGPT) could be everywhere executing on instructions in autonomous and semi-autonomous ways.
-
-<br>
-
-### Commercial Chatbots
-
-<figure style="display: flex; justify-content: center;">
-    <a href="https://openai.com/chatgpt"><img src="https://static-00.iconduck.com/assets.00/openai-icon-2021x2048-4rpe5x7n.png" alt="openai" style="width: 120px; margin-right: 15px;"></a>
-    <a href="https://gemini.google.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" alt="gemini" style="width: 240px; margin-right: 15px;"></a>
-    <a href="https://www.anthropic.com/claude"><img src="https://claude.ai/images/claude_app_icon.png" alt="foster" style="width: 120px; margin-right: 15px;"></a>
-    <a href="https://www.microsoft.com/en-us/bing?form=MA13FV"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Microsoft_365_Copilot_Icon.svg/2048px-Microsoft_365_Copilot_Icon.svg.png" alt="cos" style="width: 120px;"></a>
-</figure>
-
-<br>
-<br>
-
-- [:simple-openai: ChatGPT](https://openai.com/chatgpt)
-- [:simple-google: Gemini](https://gemini.google.com/)
-- [:simple-anthropic: Claude](https://www.anthropic.com/claude)
-- [:octicons-copilot-16: Copilot](https://www.microsoft.com/en-us/bing?form=MA13FV)
-
-<br>
-<br>
-<br>
-
-
-### LLMs in 150 words (or less)
-
-**How they're made**: LLMs work by training on vast amounts of text from the internet. They learn patterns, grammar, and context from this data. When you give them a prompt, they generate text based on what they've learned. Imagine a super-smart autocomplete for text, but it can also create entire paragraphs or articles.
-
-**How they work**: LLMs don't understand like humans do. They predict what comes next in a sentence using math and probabilities. They don't have thoughts or feelings. They mimic human language but can make mistakes or write nonsense if not guided well.
-
-**How you can use them**: They're incredibly versatile. You can use them for answering questions, writing essays, coding help, and more. ***But you must be cautious because they can generate biased or false information if not used responsibly***. 
-
-In a nutshell, LLMs are like super-powered text generators trained on the internet's vast knowledge.
-
-<br>
-<br>
-
-!!! Warning ":warning::warning: **VERIFY EVERTHING CHATBOTS TELL YOU!** :warning::warning:"
-
-<br>
-<br>
-<br>
-
-### :simple-openai: Prompt Writing
-
-LLM Chatbots are meant to be conversational. In general, you are asking the Chatbot questions (known as **Prompts**) and the Chatbot will respond with answers. 
-
-It is a bit of an artform to get the Chatbot to provide answers with the specificity and format that you want. An entire field of study has sprung up, called **Prompt Engineering**, which seeks to find the magic words that will elicit the best (and technically correct) responses from the Chatbot. 
-
-<br>
-<br>
-
-#### **Prompt Priming** 
-
-Provide lots of organized details to help the Chatbot understand the question and what it's task is. This could include adding a backstory or context for why you are asking the question. Be very specific in terms of what you want from the Chatbot and how you want it. 
-
-Zero-shot unconditioned prompts are likely to return the least specific responses. Responses are more likely to be useful when multiple specific output types are defined.
-
-| Types of Priming | Example |
-|------------------|---------|
-| Zero (Shot) | "Write five examples of assessments for watershed health." |
-| Single | "Write five examples of assessments for watershed health. Here is one example: Geomorphology" |
-| Multiple | "Write five examples of assessments for watershed health related to geomorphology, water quality, and species diversity." |
-
-<br>
-<br>
-
-#### **Linked Prompts**
-
-Responses to prompts may not return the exact details or information that you are after the first time. Follow-up by rephrasing your prompts more carefully and continuing with iterative prompting can build upon your priors.
-
-"Chain prompting" or "Linked Prompting" brings multiple prompts together.
-
-| Linked Prompting | Examples |
-|------------------|----------|
-| Step 1: Priming | "I want you to act as an eminent hydrologist from CUASHI. Provide me with a list of the ten most important topics in hydrology over the last decade focused around research in the global south, working with indigenous communities, and traditional ecological knowledge systems." |
-| Step 2: Summarizing | "Based on the list you just created, summarize the most pressing financial challenges faced by indigenous communities in the Global South, versus indigenous communities in North America, in less than 50 words." |
-| Step 3: Try again with a web search | "Based on the results of web access, can you confirm the validity of the ten important topics and provide at least one reference to each." |
-
-!!! tip "Encouraging the Chatbot to do Better"
-    Chatbot responses can be missing information or just plain wrong. When this occurs, you can point out the mistake and ask the Chatbot to provide a more complete or better answer. Don't settle for poor responses!
-
-<br>
-<br>
-
-#### Role Playing
-
-Some people find that asking the Chatbot to adopt a persona will lead to better responses. 
-
-"I want you to act as ..." will establish what type of conversation you are planning to have. 
-
-| Types of Roles |
-|---|
-| Project Manager  | 
-| Copywriter / Editor  | 
-| Paper Reviewer | 
-| Teacher / Mentor / Advisor |
-| Student / Learner / Participant |
-| Software Engineer  |
-| DevOps Engineer  |
-| Linux Terminal  |
-| Python Interpreter |
-| Web Browser |
-
-<br>
-<br>
-<br>
-
-### Prompting Chatbots for FOSS
-
-<br>
-
-#### Provide a general outline for a data management plan
-
-```
-I am writing a grant proposal to the National Science Foundation. 
-Could you please provide me a basic template for a data management plan (DMP) and 
-please provide url links to resources that can help me with NSF DMP requirements.
-```
-<br>
-<br>
-
-
-#### Provide a step-by-step recipe to create and serve an mkdocs website in Github
-
-```
-I would like to create a personal website using the MKdocs style 
-and host it on Github pages.
-
-Could you please write me a step-by-step guide starting 
-with importing an existing github repository that has the mkdocs material.
-```
-<br>
-<br>
-
-#### Write shell commands and shell scripts
-
-```
-I would like to create a linux shell script to automate the backup of my working directory. 
-Could you please suggest a shell script that will copy my working directory 
-in a different directory and compress the file into an archive. 
-Please name the file based on the current time and date. 
-```
-
-<br>
-<br>
-
-#### Write git commands
-
-```
-Could you please provide me a step-by-step workflow for using git with github? 
-I found a repository that I want to build on in Github. 
-I would like to work on the material on my local machine and then save it back up to github. 
-I would like to workflow to be for the linux command line. 
-```
-
-<br>
-<br>
-
-#### Write download and conda commands
-```
-I am writing a lot of scripts using python. I have heard that environment managers such as conda may be useful to me. 
-I don't know anything about conda, so can you explain some things?
-1. Give me a high level overview of what environment managers are and what conda is specifically.
-2. Please create a step-by-step guide for downloading conda on my machine, and how to use conda to create custom environments. 
-3. Please explain and give my steps to share my environment with colleagues.
-```
-<br>
-<br>
-
-#### Write docker run commands
-
-```
-I would like to run a docker container that consists of a jupyter notebook. 
-Can you please suggest a docker run command that launches the jupyter notebook
-and mounts a volume of data in it. 
-```
-
-<br>
-<br>
-
-#### Write docker files
-
-```
-I would like to create a docker image that consists of R studio and 
-some customized Rcode. Can you tell me the steps to 1. make a dockerfile and 
-build the docker image; and 2. Upload the docker image to docker hub.
-```
-
-
-<br>
-<br>
-<br>
-<br>
-
-??? Tip "ChatGPT :simple-awesomelists: Awesome Lists"
-
-    There is an ever changing meta-list of :simple-awesomelists: Awesome lists curated around ChatGPT plugins and extensions.
-
-    [:simple-github: search: `chatgpt+awesome`](https://github.com/search?q=awesome-chatgpt+&type=repositories&s=stars&o=desc)
-
-    Check out lists around:
-
-    [:simple-awesomelists: ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)
-
-    [:simple-awesomelists: ChatGPT Data Science Prompts](https://github.com/travistangvh/ChatGPT-Data-Science-Prompts)
-   
-    [:simple-awesomelists: API plugins, extensions, & applications](https://github.com/humanloop/awesome-chatgpt)
-
-
-
