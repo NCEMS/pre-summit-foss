@@ -14,7 +14,7 @@
 
 1.  **Open VS Code**.
 2.  Navigate to the **Extensions view** by clicking the :material-puzzle-outline: icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (macOS).
-3.  In the search bar, type "**Roo Code**" (or "**Cline**" if Roo Code isn't listed and you're using vanilla Cline).
+3.  In the search bar, type  "**Cline**" 
 4.  Find the official extension from the search results and click **Install**.
 5.  Once installed, you might need to **reload VS Code** if prompted.
 
@@ -27,15 +27,15 @@ After installation, you'll typically need to configure an LLM API endpoint and k
 1.  Obtain your **Google Gemini API key** from [Google AI Studio](https://aistudio.google.com/){target=_blank} or Google Cloud Console.
 2.  In VS Code settings, search for "Roo Code Gemini" or a similar setting.
 3.  Enter your API key in the designated field (e.g., `Roo Code: Gemini API Key`).
-4.  You might also need to specify the model (e.g., `gemini-pro`).
+4.  You might also need to specify the model (e.g., `gemini-pro-2.5`).
 
 ##### Ollama (for Local Models)
 
-[Ollama](https://ollama.ai/){target=_blank} allows you to run open-source LLMs locally.
+[Ollama](https://ollama.com){target=_blank} allows you to run open-source LLMs locally.
 
-1.  Ensure **Ollama is installed and running** on your machine with the desired models downloaded (e.g., `ollama pull llama3`).
+1.  Ensure **Ollama is installed and running** on your machine with the desired models downloaded (e.g., `ollama pull gemma3:1b`).
 2.  In VS Code settings for Roo Code/Cline, look for an option to specify the **Ollama API endpoint**. This is usually `http://localhost:11434` by default.
-3.  Select or specify the Ollama model you wish to use (e.g., `llama3`, `codellama`). No API key is typically needed for local Ollama usage directly, but the extension must be configured to point to the local server.
+3.  Select or specify the Ollama model you wish to use (e.g., `gemma`, `qwen`). No API key is typically needed for local Ollama usage directly, but the extension must be configured to point to the local server.
 
 ##### OpenAI Compatible
 
@@ -48,7 +48,7 @@ This is for services that adhere to the OpenAI API specification, which can incl
 2.  In VS Code settings for Roo Code/Cline:
     * Enter the API key (e.g., `Roo Code: OpenAI API Key`).
     * Enter the API base URL if it's different from the default (e.g., `Roo Code: OpenAI API Base URL`).
-    * Select the desired model (e.g., `gpt-4o`, `gpt-3.5-turbo`).
+    * Select the desired model (e.g., `gpt-4o`).
 
 ##### Claude (via API)
 
@@ -57,7 +57,7 @@ If Roo Code/Cline supports direct Claude API integration (distinct from the Clau
 1.  Obtain your **Anthropic API key** from the [Anthropic Console](https://console.anthropic.com/){target=_blank}.
 2.  In VS Code settings for Roo Code/Cline, search for "Roo Code Claude" or a similar setting.
 3.  Enter your API key (e.g., `Roo Code: Claude API Key`).
-4.  Specify the Claude model you wish to use (e.g., `claude-3-opus-20240229`).
+4.  Specify the Claude model you wish to use (e.g., `claude-4-sonnet`).
 
 !!! Tip "Restart for Changes"
     After changing API settings, it's often a good idea to restart VS Code or the extension itself if it provides such an option, to ensure the new settings take effect.
@@ -113,8 +113,6 @@ Vibe coding refers to using an LLM to generate and edit code directly within you
 | :material-license: | Licensed |
 | :material-api: | API based | 
 
-* [:octicons-command-palette-16: Aider](https://aider.chat/){target=_blank} :simple-gnubash: :material-open-source-initiative:
-    A popular command-line tool for AI-driven coding, often used with local or remote LLMs.
 * [:simple-anthropic: Claude Desktop](https://claude.ai/download){target=_blank} :material-apple: :material-microsoft-windows: :material-api:
     An easy-to-install desktop platform that connects to Anthropic's powerful LLM API, and allows you to connect to MCP servers.
 * [:material-cursor-default-click: Cursor](https://www.cursor.com/en){target=_blank} :material-microsoft-visual-studio-code: :material-open-source-initiative: :material-license:
@@ -123,10 +121,9 @@ Vibe coding refers to using an LLM to generate and edit code directly within you
     Integrated with VS Code and GitHub CodeSpaces, provides agentic coding with periodic performance fluctuations and tiered pricing.
 * [:material-robot: Cline](https://github.com/cline/cline){target=_blank} :material-microsoft-visual-studio-code: :material-open-source-initiative: :material-api:
     Open-source and model-agnostic, pioneering features like “bring your own model” (BYOM) and operating on a per-request billing structure.
-* [:material-kangaroo: Roo Code](https://github.com/RooVetGit/Roo-Code){target=_blank} :material-microsoft-visual-studio-code: :material-open-source-initiative: :material-api:
-    Derived from Cline, prioritizes rapid feature development and customization, serving users interested in experimental capabilities.
 * [:material-surfing: Windsurf](https://windsurf.com/editor){target=_blank} :material-microsoft-visual-studio-code: :material-license: :material-api:
     Offers similar agentic and inline features with tiered pricing and a “just works” usability orientation.
+
 ## Introduction to Prompt Engineering
 
 **Prompt Engineering** is a technique of crafting effective instructions using AI large language models. With modern AI-powered tools like Claude Desktop, ChatGPT, Gemini, and NotebookLM offering capabilities to upload documents, search the web, and process multiple file types, mastering prompt engineering has become essential for productive AI interactions.
