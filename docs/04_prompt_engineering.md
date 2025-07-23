@@ -6,8 +6,6 @@
 
 ## Local LLMs vs APIs
 
-## CyVerse Verde
-
 ### Managing API keys
 
 #### Extension Installation
@@ -83,6 +81,33 @@ GitHub Copilot is deeply integrated into the GitHub ecosystem and VS Code (local
 5.  **Sign In**: After installation, VS Code will prompt you to sign in with your GitHub account. Follow the prompts to authorize VS Code to use GitHub Copilot.
     * If you're not prompted, you can often click the user icon in the bottom left of VS Code and sign in there, or find a "Sign In to GitHub Copilot" command in the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`).
 6.  Once signed in and with an active subscription, Copilot will be ready to assist you. You'll see its icon :octicons-copilot-16: in the status bar.
+
+---
+
+## Model Context Protocol (MCP)
+
+Model context protocol (MCP) is an open-source standard created by Anthropic, designed to communicate with LLMs and other AI systems. 
+
+MCP establishes a common protocol (language) for an AI assistant ("client") to request information or to execute actions from an external service ("server"). 
+
+MCP actions include reading the contents of files, querying other APIs or databases, writing new files or copying data, or executing commands. the MCP protocol defines the structure of the messages.
+
+MCPs offer a powerful framework for enhancing scientific reproducibility.
+
+* Standardized Data Access
+* Containerized Computational environments
+* Sharable Workflows
+
+### MCPs for Coding and commands
+
+A foundational MCP tool to use is the `filesystem` which gives the LLM the ability to `read`, `write`, and `execute` code on your computer or a remote server.
+
+* Ask the LLM to create a new file
+* Request the AI to refactor code or edit text in a file
+* Search through your codebase for relevant functions
+* Execute terminal commands
+
+
 
 ---
 
